@@ -1,0 +1,49 @@
+name: Disaster Recovery
+type: profile
+description: 'Disaster Recovery Profile'
+core: 8.x
+
+dependencies:
+  - address
+  - admin_toolbar
+  - admin_toolbar_tools
+  - block
+  - block_content
+  - breakpoint
+  - ckeditor
+  - coffee
+  - color
+  - config
+  - contextual
+  - ctools
+  - datetime
+  - dblog
+  - editor
+  - entity_reference
+  - field_ui
+  - file
+  - geofield
+  - help
+  - history
+  - image
+  - menu_link_content
+  - menu_ui
+  - metatag
+  - node
+  - options
+  - page_cache
+  - path
+  - pathauto
+  - quickedit
+  - taxonomy
+  - telephone
+  - token
+  - toolbar
+  - tour
+  - twig_tweak
+  - views
+  - views_ui
+  - xmlsitemap
+themes:
+  - disaster_recovery_bootstrap
+  - seven
