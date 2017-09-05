@@ -20,24 +20,14 @@ class RecoveryOrganizationsMapBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $current_term = \Drupal::request()->attributes->get('taxonomy_term');
-    
-    if(!empty($current_term)) {
-      $current_term_tid = $current_term->id();
 
-      return [
-        '#theme' => 'recovery_organizations_map',
-        '#attached' => array(
-          'library' =>  array(      
-            'recovery_organizations_map/libraries',
-          ),
-          'drupalSettings' => [
-            'tid' => $current_term_tid,
-          ],
+    return [
+      '#theme' => 'recovery_organizations_map',
+      '#attached' => array(
+        'library' =>  array(      
+          'recovery_organizations_map/libraries',
         ),
-      ];
-    }
-
-    return NULL;
+      ),
+    ];
   }
 }
