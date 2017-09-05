@@ -1,0 +1,93 @@
+uuid: 013ccd14-cabc-4524-9692-4ef5560eee65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recovery_organization.field_address
+    - field.field.node.recovery_organization.field_description
+    - field.field.node.recovery_organization.field_geofield
+    - field.field.node.recovery_organization.field_needs
+    - field.field.node.recovery_organization.field_phone
+    - field.field.node.recovery_organization.field_provides
+    - field.field.node.recovery_organization.field_website
+    - field.field.node.recovery_organization.field_written_address
+    - node.type.recovery_organization
+  module:
+    - address
+    - geofield
+    - telephone
+    - text
+    - user
+id: node.recovery_organization.default
+targetEntityType: node
+bundle: recovery_organization
+mode: default
+content:
+  field_address:
+    weight: 101
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_description:
+    weight: 102
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_geofield:
+    weight: 103
+    label: hidden
+    settings:
+      output_format: wkt
+    third_party_settings: {  }
+    type: geofield_default
+    region: content
+  field_needs:
+    weight: 104
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_phone:
+    weight: 106
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_provides:
+    weight: 105
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_website:
+    weight: 107
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_written_address:
+    weight: 108
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

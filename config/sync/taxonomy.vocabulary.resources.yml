@@ -1,0 +1,9 @@
+uuid: 2c149343-82ad-46e8-a3bf-05622206b578
+langcode: en
+status: true
+dependencies: {  }
+name: Resources
+vid: resources
+description: ''
+hierarchy: 0
+weight: 0

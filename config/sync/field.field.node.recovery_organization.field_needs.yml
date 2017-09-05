@@ -1,0 +1,28 @@
+uuid: a204834a-1a7b-4bbe-aca4-5acfc5af6455
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_needs
+    - node.type.recovery_organization
+    - taxonomy.vocabulary.resources
+id: node.recovery_organization.field_needs
+field_name: field_needs
+entity_type: node
+bundle: recovery_organization
+label: Needs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resources: resources
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,65 @@
+uuid: dcc88f97-d060-49b3-b63f-22d0f2c50e85
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.recovery_organization.field_address
+    - field.field.node.recovery_organization.field_description
+    - field.field.node.recovery_organization.field_geofield
+    - field.field.node.recovery_organization.field_needs
+    - field.field.node.recovery_organization.field_phone
+    - field.field.node.recovery_organization.field_provides
+    - field.field.node.recovery_organization.field_website
+    - field.field.node.recovery_organization.field_written_address
+    - node.type.recovery_organization
+  module:
+    - telephone
+    - user
+id: node.recovery_organization.teaser
+targetEntityType: node
+bundle: recovery_organization
+mode: teaser
+content:
+  field_needs:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_phone:
+    type: telephone_link
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+  field_provides:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_written_address:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_address: true
+  field_description: true
+  field_geofield: true
+  field_website: true

@@ -1,0 +1,17 @@
+uuid: fa1114d5-6c72-43c5-b801-b820897bfb83
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Recovery Organization'
+type: recovery_organization
+description: 'Recovery Organization'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
