@@ -39,6 +39,7 @@ module:
   path: 0
   quickedit: 0
   recovery_organization_feed: 0
+  shs: 0
   system: 0
   taxonomy: 0
   telephone: 0
