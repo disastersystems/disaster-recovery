@@ -1,0 +1,17 @@
+uuid: 3bf5ad2e-977e-472c-8c75-ac66e91f9e5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_alert
+  module:
+    - user
+id: node.recovery_alert.default
+targetEntityType: node
+bundle: recovery_alert
+mode: default
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

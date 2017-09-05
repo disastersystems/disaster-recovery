@@ -1,0 +1,17 @@
+uuid: 1eda2901-3f4c-4c0f-abcd-7350096ac976
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Recovery Alert'
+type: recovery_alert
+description: 'Recovery Alert'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,18 @@
+uuid: e8dfb6de-5167-4eb1-bcdb-40f15733b474
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.recovery_alert
+  module:
+    - user
+id: node.recovery_alert.teaser
+targetEntityType: node
+bundle: recovery_alert
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }
