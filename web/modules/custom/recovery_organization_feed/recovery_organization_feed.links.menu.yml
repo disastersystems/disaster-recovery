@@ -1,0 +1,6 @@
+recovery_organization_feed.recovery_organization_feed_endpoint_form:
+  title: 'Recovery Organization Feed Endpoint'
+  route_name: recovery_organization_feed.recovery_organization_feed_endpoint_form
+  description: 'Recovery Organization Feed Endpoint'
+  parent: system.admin_config_system
+  weight: 99

@@ -1,0 +1,9 @@
+recovery_organization_feed.recovery_organization_feed_endpoint_form:
+  path: '/admin/config/recovery-organization-feed/endpoint'
+  defaults:
+    _form: '\Drupal\recovery_organization_feed\Form\RecoveryOrganizationFeedEndpointForm'
+    _title: 'Recovery Organization Feed Endpoint'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

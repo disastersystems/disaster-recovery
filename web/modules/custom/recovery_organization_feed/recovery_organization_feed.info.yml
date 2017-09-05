@@ -1,0 +1,5 @@
+name: Recovery Organization Feed
+type: module
+description: Custom module that handle importing Recovery Organization.
+core: 8.x
+package: Disaster Recovery
