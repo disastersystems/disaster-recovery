@@ -1,0 +1,20 @@
+uuid: 192839ac-55d0-464c-bb85-a149a64f0db4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.recovery_status.field_status
+    - node.type.recovery_status
+  module:
+    - user
+id: node.recovery_status.teaser
+targetEntityType: node
+bundle: recovery_status
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_status: true
