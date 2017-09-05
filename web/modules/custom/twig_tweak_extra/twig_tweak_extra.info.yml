@@ -1,0 +1,5 @@
+name: Twig Tweak Extra
+type: module
+description: Helper module that implement twig extension for easy theming.
+core: 8.x
+package: Custom

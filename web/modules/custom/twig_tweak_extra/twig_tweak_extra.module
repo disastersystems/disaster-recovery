@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains twig_tweak_image.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function twig_tweak_image_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the twig_tweak_image module.
+    case 'help.page.twig_tweak_image':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
