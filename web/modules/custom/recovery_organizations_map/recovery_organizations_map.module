@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains recovery_organizations_map.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function recovery_organizations_map_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the recovery_organizations_map module.
+    case 'help.page.recovery_organizations_map':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom map showing organizations by taxonomy terms.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function recovery_organizations_map_theme() {
+  return [
+    'recovery_organizations_map' => [
+      'template' => 'recovery-organizations-map',
+      'render element' => 'children',
+    ],
+  ];
+}

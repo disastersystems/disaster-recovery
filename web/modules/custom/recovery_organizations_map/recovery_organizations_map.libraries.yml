@@ -1,0 +1,7 @@
+libraries:
+  js:
+    https://maps.googleapis.com/maps/api/js?key=AIzaSyCkcrVlXOjrUfOPLPNJEME02WDNjA1Fyok: {type: external}
+    js/recovery_organizations_map.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

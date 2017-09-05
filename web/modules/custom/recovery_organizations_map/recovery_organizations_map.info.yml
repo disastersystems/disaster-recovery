@@ -1,0 +1,5 @@
+name: Recovery Organizations Map
+type: module
+description: Custom map showing organizations by taxonomy terms.
+core: 8.x
+package: Disaster Recovery
