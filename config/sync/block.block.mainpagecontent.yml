@@ -1,0 +1,20 @@
+uuid: 6b95acbe-e5a4-40c7-bec1-e52117c3c96a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - disaster_recovery_bootstrap
+id: mainpagecontent
+theme: disaster_recovery_bootstrap
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

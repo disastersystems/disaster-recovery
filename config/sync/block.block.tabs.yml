@@ -1,0 +1,20 @@
+uuid: e8144bb5-d61a-40f1-8a8f-be536010e626
+langcode: en
+status: true
+dependencies:
+  theme:
+    - disaster_recovery_bootstrap
+id: tabs
+theme: disaster_recovery_bootstrap
+region: content
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
