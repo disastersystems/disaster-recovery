@@ -1,0 +1,6 @@
+knowledge_base_integration.knowledge_base_endpoint_form:
+  title: 'Knowledge Base Endpoint'
+  route_name: knowledge_base_integration.knowledge_base_endpoint_form
+  description: 'Organization Feed Endpoints'
+  parent: system.admin_config_system
+  weight: 99

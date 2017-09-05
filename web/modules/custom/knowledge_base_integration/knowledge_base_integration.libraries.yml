@@ -1,0 +1,6 @@
+libraries:
+  js:
+    js/knowledge-base-search.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

@@ -1,0 +1,9 @@
+knowledge_base_integration.knowledge_base_endpoint_form:
+  path: '/admin/config/knowledge-base/endpoint'
+  defaults:
+    _form: '\Drupal\knowledge_base_integration\Form\KnowledgeBaseEndpointForm'
+    _title: 'Knowledge Base Endpoint'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
