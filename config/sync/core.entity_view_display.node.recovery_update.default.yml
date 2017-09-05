@@ -1,0 +1,25 @@
+uuid: 9f9488f7-b567-4c84-88bd-0e3715a92079
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recovery_update.field_message
+    - node.type.recovery_update
+  module:
+    - user
+id: node.recovery_update.default
+targetEntityType: node
+bundle: recovery_update
+mode: default
+content:
+  field_message:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

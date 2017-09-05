@@ -1,0 +1,24 @@
+uuid: 99bb4bed-c78e-474b-ac2f-b354e4af2e43
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.recovery_update.field_message
+    - node.type.recovery_update
+  module:
+    - user
+id: node.recovery_update.teaser
+targetEntityType: node
+bundle: recovery_update
+mode: teaser
+content:
+  field_message:
+    type: basic_string
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  links: true

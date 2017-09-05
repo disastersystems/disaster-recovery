@@ -1,0 +1,17 @@
+uuid: 501f3a8d-a681-45f0-8c59-57dafacb6eb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Recovery Update'
+type: recovery_update
+description: 'Recovery Update'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

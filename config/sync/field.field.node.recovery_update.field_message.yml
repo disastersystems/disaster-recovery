@@ -1,0 +1,19 @@
+uuid: 0c894c8e-8b31-48d5-aedd-16ad189cb0b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_message
+    - node.type.recovery_update
+id: node.recovery_update.field_message
+field_name: field_message
+entity_type: node
+bundle: recovery_update
+label: Message
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
