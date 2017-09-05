@@ -7,6 +7,7 @@ dependencies:
   - address
   - admin_toolbar
   - admin_toolbar_tools
+  - automated_cron
   - block
   - block_content
   - breakpoint
