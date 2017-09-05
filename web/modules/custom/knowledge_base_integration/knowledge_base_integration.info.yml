@@ -1,0 +1,5 @@
+name: Knowledge Base Integration
+type: module
+description: Custom module to handle Knowledge Base Searching with Third Party.
+core: 8.x
+package: Disaster Recovery

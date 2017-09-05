@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains knowledge_base_integration.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function knowledge_base_integration_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the knowledge_base_integration module.
+    case 'help.page.knowledge_base_integration':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom module to handle Knowledge Base Searching with Third Party.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function knowledge_base_integration_theme() {
+  return [
+    'knowledge_base_search' => [
+      'template' => 'knowledge-base-search',
+      'variables' => [
+        'articles' => NULL,
+      ],
+    ],
+  ];
+}
