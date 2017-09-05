@@ -34,16 +34,24 @@ services:
       - ./:/var/www/html:cached
 
     labels:
-      - 'traefik.backend=recovery_nginx_1'
+      - 'traefik.backend=nginx'
       - 'traefik.port=80'
-      - 'traefik.frontend.rule=Host:recovery.docker.localhost'
+      - 'traefik.frontend.rule=Host:drupal.docker.localhost'
 
   mailhog:
     image: mailhog/mailhog
     labels:
       - 'traefik.backend=mailhog'
       - 'traefik.port=8025'
-      - 'traefik.frontend.rule=Host:mailhog.Host:recovery.docker.localhost'
+      - 'traefik.frontend.rule=Host:mailhog.Host:drupal.docker.localhost'
+
+  traefik:
+    image: traefik
+    command: -c /dev/null --web --docker --logLevel=INFO
+    ports:
+      - '8000:80'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
   codebase:
