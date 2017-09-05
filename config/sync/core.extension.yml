@@ -26,12 +26,16 @@ module:
   image: 0
   kint: 0
   knowledge_base_integration: 0
+  layout_discovery: 0
   link: 0
   menu_ui: 0
   metatag: 0
   node: 0
   options: 0
   page_cache: 0
+  page_manager: 0
+  page_manager_ui: 0
+  panels: 0
   path: 0
   quickedit: 0
   recovery_organization_feed: 0
