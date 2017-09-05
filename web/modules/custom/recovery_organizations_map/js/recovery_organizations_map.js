@@ -9,7 +9,7 @@
       });
 
       function initialize() {
-        getOrganizations(tid, function(organizations) {
+        getOrganizations(function(organizations) {
           var markers = []
           var latlngbounds = new google.maps.LatLngBounds();
           var infowindow = new google.maps.InfoWindow({
@@ -45,17 +45,29 @@
         });
       }
 
-      function getOrganizations(tid, callback) {
-        $.ajax({
-          url: '/api/v1/organizations/' + tid,
-          type: 'get',
-          success: function (response) {
-            if(callback) {
-              callback(response);
+      function getOrganizations(callback) {
+        getParam('tid', function(tid) {
+          $.ajax({
+            url: '/api/v1/organizations/' + tid,
+            type: 'get',
+            success: function (response) {
+              if(callback) {
+                callback(response);
+              }
             }
-          }
-        });
+          });
+        })
       }
+
+      function getParam(name, callback) {
+        tid = decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+        if (tid == null) {
+          callback('all');
+        } else {
+          callback(tid);
+        }
+      }
+
     }
   }
 })(jQuery)
