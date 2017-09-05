@@ -39,6 +39,10 @@ module:
   path: 0
   quickedit: 0
   recovery_organization_feed: 0
+  recovery_organizations_map: 0
+  rest: 0
+  restui: 0
+  serialization: 0
   shs: 0
   system: 0
   taxonomy: 0
@@ -48,6 +52,7 @@ module:
   toolbar: 0
   tour: 0
   twig_tweak: 0
+  twig_tweak_extra: 0
   update: 0
   user: 0
   views_ui: 0
