@@ -57,41 +57,19 @@ class Helper {
     return $organizations;
   }
 
-  /**
-   *
-   *  Processing Address
-   *
-   *  @return
-   *  address
-   */
-  // public static function processAddress($address, $city) {
-    
-  // }
 
   /**
-   *  Request Organization address from Google API
+   *
+   *  Get Shelters Term ID
    *
    *  @return
-   *  address information
+   *  tid
    */
-  // public static function getOrganizationAddress($address) {
-  //   $endpoint = "http://maps.googleapis.com/maps/api/geocode/json?address=$address";
-  //   $data = self::createHttpRequest($endpoint);
-  //   $address = [];
-
-  //   if($data->status == "OK") {
-  //     $results = $data->results;
-  //     $address_components = $results[0]->address_components;
-
-  //     foreach($address_components as $component) {
-  //       $type = $component->types[0];
-  //       $value = $component->short_name;
-  //       $address[$type] = $value;
-  //     }
-
-  //     return $address;
-  //   }
-
-  //   return NULL;
-  // }
+  public static function getSheltersTermID() {
+    $tid = \Drupal::database()
+                  ->query("SELECT tid
+                    FROM taxonomy_term_field_data
+                    WHERE name='shelters' and vid='resources'")->fetchField();
+    return $tid;
+  }
 }

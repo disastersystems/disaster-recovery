@@ -86,7 +86,7 @@ class RecoveryOrganizationFeed {
       'status' => 1,
       'field_phone' => $phone,
       'field_provides' => [
-        'target_id' => 28
+        'target_id' => Helper::getSheltersTermID(),
       ],
       'field_written_address' => $written_address,
       'field_description' => [
