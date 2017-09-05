@@ -1,0 +1,11 @@
+uuid: 903acf58-5b1c-47a3-a9fa-f4a69bb431ef
+langcode: en
+status: true
+dependencies: {  }
+id: NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
+label: 'http://recovery.docker.localhost/core/install.php/'
+chunks: 1
+links: 1
+max_filesize: 309
+context: {  }
+updated: 1504574865
