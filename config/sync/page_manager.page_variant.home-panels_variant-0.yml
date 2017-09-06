@@ -5,12 +5,22 @@ dependencies:
   config:
     - page_manager.page.home
   module:
+    - knowledge_base_integration
     - panels
 id: home-panels_variant-0
 label: Home
 variant: panels_variant
 variant_settings:
-  blocks: {  }
+  blocks:
+    ce6cb4ad-fe54-4d51-a1eb-fc40b982e0be:
+      id: knowledge_base_search_block
+      label: 'Knowledge Base Search Block'
+      provider: knowledge_base_integration
+      label_display: '0'
+      region: content
+      weight: 0
+      uuid: ce6cb4ad-fe54-4d51-a1eb-fc40b982e0be
+      context_mapping: {  }
   id: panels_variant
   uuid: d4a0ac67-2a07-48a8-a2a5-8859447bd2d4
   label: null
