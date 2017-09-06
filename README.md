@@ -5,24 +5,30 @@
 ## Requirements
 - [Docker4Drupal](https://github.com/wodby/docker4drupal/). Please follow documentation for usage. There will be a section below to summary some main points.
 - [Composer Template for Drupal Projects](https://github.com/drupal-composer/drupal-project)
-- [Docker Community Edition(Edge) for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac)
+- [Docker Community Edition for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac)
 
 ## Installation
 
 ```
+- make sure docker is running.
 - git clone https://github.com/disastersystems/disaster-recovery.git
-- composer install
-- docker-compose up -d
-- open http://drupal.docker.localhost:8000
-- run through installation process
-- use "drupal" for username/password/dbname
-- use "mariadb" for db host and leave port empty
+- bash install.sh
 ```
 
-## Synchronize Configuration
+This will install the site, import existing configuration and generate one time login link for you.
+
+## Export Configuration
+
 ```
-  - cat config/sync/system.site.yml to get uuid.
-  - docker-compose exec --user 82 php drush cset "system.site" uuid "uuid-from-system-site-yml" --root=/var/www/html/web
+  - docker-compose exec --user 82 php drush config-export --root=/var/www/html/web
+```
+
+**IMPORTANT:** Only commit files related to your features only.
+
+## Synchronize Configuration
+
+```
+  - git pull latest update
   - docker-compose exec --user 82 php drush config-import --root=/var/www/html/web
 ```
 
@@ -30,6 +36,7 @@
 
 ## Migrating Data
 ```
+  - create term "Shelters" under Resources vocabulary
   - docker-compose exec --user 82 php drush import-organization --root=/var/www/html/web
 ```
 
