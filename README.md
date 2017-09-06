@@ -10,7 +10,7 @@
 ## Installation
 
 
-Install Docker
+Install Docker Mac
 ```
 - https://store.docker.com/editions/community/docker-ce-desktop-mac
 - Follow instructions on the site
