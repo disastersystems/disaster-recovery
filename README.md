@@ -9,9 +9,19 @@
 
 ## Installation
 
+
+Install Docker
 ```
-- make sure docker is running.
+- https://store.docker.com/editions/community/docker-ce-desktop-mac
+- Follow instructions on the site
+- Launch Docker once it is installed
+
+```
+
+Clone the repository
+```
 - git clone https://github.com/disastersystems/disaster-recovery.git
+- cd disaster-recovery
 - bash install.sh
 ```
 
