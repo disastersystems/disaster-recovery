@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - page_manager.page.home
+    - views.view.latest_recovery_updates
   module:
     - knowledge_base_integration
     - panels
+    - views
 id: home-panels_variant-0
 label: Home
 variant: panels_variant
@@ -20,6 +22,17 @@ variant_settings:
       region: content
       weight: 0
       uuid: ce6cb4ad-fe54-4d51-a1eb-fc40b982e0be
+      context_mapping: {  }
+    5d6d15bd-9926-4e39-b447-6e00be6d978a:
+      id: 'views_block:latest_recovery_updates-block'
+      label: Updates
+      provider: views
+      label_display: visible
+      views_label: Updates
+      items_per_page: none
+      region: content
+      weight: 0
+      uuid: 5d6d15bd-9926-4e39-b447-6e00be6d978a
       context_mapping: {  }
   id: panels_variant
   uuid: d4a0ac67-2a07-48a8-a2a5-8859447bd2d4
