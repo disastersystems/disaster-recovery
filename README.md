@@ -3,15 +3,15 @@
 # Disaster Recovery Platform
 
 ## Requirements
-- [Docker4Drupal](https://github.com/wodby/docker4drupal/). Please follow documentation for usage. There will be a section below to summary some main points.
-- [Composer Template for Drupal Projects](https://github.com/drupal-composer/drupal-project)
-- [Docker Community Edition for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac)
+- [Docker Community Edition for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac) - Ensure Docker is installed and running
+- [Composer](https://getcomposer.org/) - Ensure composer is installed
 
 ## Installation
 
+Clone the repository
 ```
-- make sure docker is running.
 - git clone https://github.com/disastersystems/disaster-recovery.git
+- cd disaster-recovery
 - bash install.sh
 ```
 
