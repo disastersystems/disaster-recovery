@@ -1,4 +1,7 @@
 libraries:
+  css:
+    theme:
+      css/knowledge-base-search.css: {}
   js:
     js/knowledge-base-search.js: {}
   dependencies:
