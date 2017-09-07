@@ -43,4 +43,4 @@ docker-compose exec --user 82 php drush import-organization --root=/var/www/html
 
 ## Sponsors
 
-[![Poetic Logo](https://s3.amazonaws.com/disastersystems/poeticlogo.png)](https://poeticsystems.com)
+[![Poetic Logo](https://s3.amazonaws.com/disastersystems/poetic-dark.png)](https://poeticsystems.com)
