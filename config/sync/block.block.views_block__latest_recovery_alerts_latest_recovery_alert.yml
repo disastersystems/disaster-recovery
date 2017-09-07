@@ -1,0 +1,24 @@
+uuid: 45dd0548-8d08-4749-808d-5a799688678b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_recovery_alerts
+  module:
+    - views
+  theme:
+    - disaster_recovery_bootstrap
+id: views_block__latest_recovery_alerts_latest_recovery_alert
+theme: disaster_recovery_bootstrap
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:latest_recovery_alerts-latest_recovery_alert'
+settings:
+  id: 'views_block:latest_recovery_alerts-latest_recovery_alert'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }
