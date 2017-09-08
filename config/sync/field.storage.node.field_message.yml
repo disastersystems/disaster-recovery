@@ -1,16 +1,16 @@
-uuid: 0653fbf6-94f0-4ac2-894a-5e09acbb95c7
+uuid: a025c044-4d79-4d8e-b44c-428214afd04b
 langcode: en
 status: true
 dependencies:
   module:
     - node
+    - text
 id: node.field_message
 field_name: field_message
 entity_type: node
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true
