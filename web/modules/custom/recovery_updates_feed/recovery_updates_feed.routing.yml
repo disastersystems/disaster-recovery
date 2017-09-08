@@ -1,0 +1,9 @@
+recovery_updates_feed.recovery_updates_feed_rss_endpoint:
+  path: '/admin/config/recovery-updates-feed/endpoint'
+  defaults:
+    _form: '\Drupal\recovery_updates_feed\Form\RecoveryUpdatesFeedRSSEndpoint'
+    _title: 'Recovery Updates RSS Endpoint'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

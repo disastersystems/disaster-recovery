@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Contains recovery_updates_feed.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\recovery_updates_feed\Helper;
+/**
+ * Implements hook_help().
+ */
+function recovery_updates_feed_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the recovery_updates_feed module.
+    case 'help.page.recovery_updates_feed':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom module to import updates from rss feed.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function recovery_updates_feed_cron() {
+  $rss_endpoint = \Drupal::config('recovery_updates_feed.endpoint')->get('rss');
+  \Drupal::logger('recovery_updates_feed')->notice('cron ran');
+}

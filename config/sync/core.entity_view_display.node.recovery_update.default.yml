@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.recovery_update.field_message
     - node.type.recovery_update
   module:
+    - text
     - user
 id: node.recovery_update.default
 targetEntityType: node
@@ -13,13 +14,15 @@ bundle: recovery_update
 mode: default
 content:
   field_message:
-    weight: 102
-    label: above
+    weight: 101
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
     region: content
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

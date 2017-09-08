@@ -159,14 +159,28 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
+  block:
     display_plugin: block
-    id: block_1
+    id: block
     display_title: 'Latest Recovery Updates Block'
-    position: 1
+    position: 2
     display_options:
       display_extenders: {  }
       display_description: ''
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<h4 class="col-lg-12"><a href="/latest-updates">Read More</a></h4>'
+          plugin_id: text_custom
+      defaults:
+        footer: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -179,19 +193,64 @@ display:
     display_plugin: feed
     id: feed_1
     display_title: 'Latest Recovery Updates Feed'
-    position: 2
+    position: 3
     display_options:
       display_extenders: {  }
       row:
         type: node_rss
         options: {  }
-      path: latest-recovery-updates
+      path: updates
+      display_description: ''
+      displays:
+        default: default
+        block: block
+        page_1: page_1
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: 'Latest Recovery Updates Page'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: latest-updates
+      pager:
+        type: full
+        options:
+          items_per_page: 15
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      defaults:
+        pager: false
       display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
