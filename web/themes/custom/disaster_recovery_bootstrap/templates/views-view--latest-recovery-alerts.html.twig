@@ -32,7 +32,7 @@
 #}
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xl-12 col-sm-6 col-lg-4">
+    <div class="col-xl-12 col-sm-6 col-lg-6">
       {%
         set classes = [
           dom_id ? 'js-view-dom-id-' ~ dom_id,
@@ -67,9 +67,6 @@
 
         {{ feed_icons }}
       </div>
-    </div>
-    <div class="col-xl-12 col-sm-6 col-lg-8">
-      {{ drupal_block_plugin('recovery_organizations_map_block') }}
     </div>
   </div>
 </div>
