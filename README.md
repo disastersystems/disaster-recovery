@@ -2,7 +2,7 @@
 
 # Disaster Recovery Platform
 
-[![Slack Status](https://disastersystemsbadge.herokuapp.com/badge.svg)](http://slack.disastersystems.org/)
+[![Slack Status](https://disastersystems.herokuapp.com/badge.svg)](http://slack.disastersystems.org/)
 
 ## Requirements
 - [Docker Community Edition for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac) - Ensure Docker is installed and running
