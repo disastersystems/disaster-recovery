@@ -2,6 +2,7 @@
 
 # Disaster Recovery Platform
 
+![TravisCI Status](https://travis-ci.org/disastersystems/disaster-recovery.svg?branch=master)
 [![Slack Status](https://disastersystems.herokuapp.com/badge.svg)](http://slack.disastersystems.org/)
 
 ## Requirements
