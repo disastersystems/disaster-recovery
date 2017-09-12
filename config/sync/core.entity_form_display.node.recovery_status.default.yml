@@ -24,6 +24,12 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
