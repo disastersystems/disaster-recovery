@@ -27,6 +27,7 @@ module:
   image: 0
   kint: 0
   knowledge_base_integration: 0
+  language: 0
   layout_discovery: 0
   link: 0
   menu_ui: 0
@@ -51,7 +52,6 @@ module:
   text: 0
   token: 0
   toolbar: 0
-  tour: 0
   twig_tweak: 0
   twig_tweak_extra: 0
   update: 0
