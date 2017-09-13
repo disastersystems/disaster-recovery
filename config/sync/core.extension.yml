@@ -37,6 +37,7 @@ module:
   page_manager: 0
   page_manager_ui: 0
   panels: 0
+  panels_ipe: 0
   path: 0
   quickedit: 0
   radix_layouts: 0
