@@ -60,6 +60,7 @@ module:
   menu_link_content: 1
   pathauto: 1
   xmlsitemap: 1
+  content_translation: 10
   views: 10
   disaster_recovery: 1000
 theme:

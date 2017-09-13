@@ -1,0 +1,16 @@
+uuid: ce9052d0-328a-46ae-99f7-55ca9dca8b0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_organization
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.recovery_organization
+target_entity_type_id: node
+target_bundle: recovery_organization
+default_langcode: site_default
+language_alterable: true
