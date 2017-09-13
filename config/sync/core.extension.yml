@@ -39,6 +39,7 @@ module:
   panels: 0
   panels_ipe: 0
   path: 0
+  platform_remove_layouts: 0
   quickedit: 0
   radix_layouts: 0
   recovery_organization_feed: 0
