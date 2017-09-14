@@ -24,6 +24,7 @@
         "drupal/geolocation": "^1.10",
         "drupal/page_manager": "^4.0@beta",
         "drupal/panels": "^4.2",
+        "drupal/radix_layouts": "^4.0",
         "drupal/shs": "^1.0@alpha",
         "drush/drush": "~8.0",
         "webflo/drupal-finder": "^1.0.0",

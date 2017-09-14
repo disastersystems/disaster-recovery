@@ -19,8 +19,8 @@ variant_settings:
       label: 'Knowledge Base Search Block'
       provider: knowledge_base_integration
       label_display: '0'
-      region: content
-      weight: 0
+      region: contentmain
+      weight: 1
       uuid: ce6cb4ad-fe54-4d51-a1eb-fc40b982e0be
       context_mapping: {  }
     5d6d15bd-9926-4e39-b447-6e00be6d978a:
@@ -30,20 +30,20 @@ variant_settings:
       label_display: visible
       views_label: Updates
       items_per_page: none
-      region: content
-      weight: 0
+      region: contentmain
+      weight: 2
       uuid: 5d6d15bd-9926-4e39-b447-6e00be6d978a
       context_mapping: {  }
   id: panels_variant
   uuid: d4a0ac67-2a07-48a8-a2a5-8859447bd2d4
   label: null
   weight: 0
-  layout: layout_onecol
+  layout: radix_boxton
   layout_settings: {  }
-  page_title: ''
+  page_title: null
   storage_type: page_manager
   storage_id: home-panels_variant-0
-  builder: standard
+  builder: ipe
 page: home
 weight: 0
 selection_criteria: {  }

@@ -1,0 +1,5 @@
+name: Platform Remove Layouts
+type: module
+description: Custom module to remove default layouts from Layout Discovery.
+core: 8.x
+package: Platform
