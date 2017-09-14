@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains platform_remove_layouts.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\platform_remove_layouts\Helper;
+/**
+ * Implements hook_help().
+ */
+function platform_remove_layouts_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the platform_remove_layouts module.
+    case 'help.page.platform_remove_layouts':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom module to remove default layouts from Layout Discovery.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function platform_remove_layouts_layout_alter(&$definitions) {
+  // Remove default layouts
+  unset($definitions['layout_onecol']);
+  unset($definitions['layout_twocol']);
+  unset($definitions['layout_twocol_bricks']);
+  unset($definitions['layout_threecol_25_50_25']);
+  unset($definitions['layout_threecol_33_34_33']);
+
+  // Rename Radix Layouts to Other Layouts
+  foreach($definitions as $layout => $definition) {
+    $definitions[$layout]->setCategory('Other Layouts');
+  }
+}

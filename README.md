@@ -2,6 +2,9 @@
 
 # Disaster Recovery Platform
 
+![TravisCI Status](https://travis-ci.org/disastersystems/disaster-recovery.svg?branch=master)
+[![Slack Status](https://disastersystems.herokuapp.com/badge.svg)](http://slack.disastersystems.org/)
+
 ## Requirements
 - [Docker Community Edition for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac) - Ensure Docker is installed and running
 - [Composer](https://getcomposer.org/) - Ensure composer is installed
