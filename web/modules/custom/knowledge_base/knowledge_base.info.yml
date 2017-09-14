@@ -1,0 +1,5 @@
+name: Knowledge Base
+type: module
+description: This module will display all the knowledge base articles
+core: 8.x
+package: platform
