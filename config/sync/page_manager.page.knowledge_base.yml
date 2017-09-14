@@ -1,0 +1,12 @@
+uuid: 9eb62733-1f06-4af8-867a-b6d1a36bea3a
+langcode: en
+status: true
+dependencies: {  }
+id: knowledge_base
+label: 'Knowledge Base'
+description: ''
+use_admin_theme: false
+path: /knowledge-base
+access_logic: and
+access_conditions: {  }
+parameters: {  }

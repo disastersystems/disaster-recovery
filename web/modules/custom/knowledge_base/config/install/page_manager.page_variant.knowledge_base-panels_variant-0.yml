@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.knowledge_base
+    - views.view.knowledge_base
+  module:
+    - panels
+    - views
+id: knowledge_base-panels_variant-0
+label: 'Knowledge Base'
+variant: panels_variant
+variant_settings:
+  blocks:
+    c6f36d69-4340-475c-9c6d-9d3426ceef01:
+      id: 'views_block:knowledge_base-block_2'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: contentmain
+      weight: 1
+      uuid: c6f36d69-4340-475c-9c6d-9d3426ceef01
+      context_mapping: {  }
+    f862edf0-9ca6-4470-aa8e-05923e9dc167:
+      id: 'views_block:knowledge_base-block_1'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: contentmain
+      weight: 2
+      uuid: f862edf0-9ca6-4470-aa8e-05923e9dc167
+      context_mapping: {  }
+  id: panels_variant
+  uuid: f4ffcc46-c912-47be-bc7c-c78c0d32a4bd
+  label: null
+  weight: 0
+  layout: radix_boxton
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: knowledge_base-panels_variant-0
+  builder: ipe
+page: knowledge_base
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -1,4 +1,3 @@
-uuid: 5f7d4518-b77e-4aea-b77f-1c831f25e34f
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
   module:
     - node
     - user
-_core:
-  default_config_hash: EHDTzT6wS0JC_0kYzae7E24keW_HrQFcM3scIR38USY
 id: knowledge_base
 label: 'Knowledge Base'
 module: views
