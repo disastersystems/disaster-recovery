@@ -1,0 +1,35 @@
+
+disaster_alerts.disaster_alert_form:
+  path: '/admin/config/disaster_alerts/disasteralert'
+  defaults:
+    _form: '\Drupal\disaster_alerts\Form\DisasterAlertForm'
+    _title: 'DisasterAlertForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+
+disaster_alerts.create_alert_alert_init:
+  path: '/disaster_alerts/alert_init'
+  defaults:
+    _controller: '\Drupal\disaster_alerts\Controller\CreateAlert::alert_init'
+    _title: 'Create Alert Disaster'
+  requirements:
+    _permission: 'access content'
+
+disaster_alerts.send_alert_send_alert_init:
+  path: '/disaster_alerts/send_alert_init'
+  defaults:
+    _controller: '\Drupal\disaster_alerts\Controller\SendAlert::send_alert_init'
+    _title: 'Send Alert Disaster'
+  requirements:
+    _permission: 'access content'
+
+disaster_alerts.remove_alert_remove_alert_init:
+  path: '/disaster_alerts/remove_alert_init'
+  defaults:
+    _controller: '\Drupal\disaster_alerts\Controller\RemoveAlert::remove_alert_init'
+    _title: 'Remove Alert Disaster'
+  requirements:
+    _permission: 'access content'

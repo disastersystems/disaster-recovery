@@ -1,0 +1,5 @@
+name: disaster-alerts
+type: module
+description: Disaster Alerts
+core: 8.x
+package: Custom
