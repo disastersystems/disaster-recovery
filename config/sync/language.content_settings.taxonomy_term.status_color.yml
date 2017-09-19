@@ -8,9 +8,9 @@ dependencies:
     - content_translation
 third_party_settings:
   content_translation:
-    enabled: false
+    enabled: true
 id: taxonomy_term.status_color
 target_entity_type_id: taxonomy_term
 target_bundle: status_color
 default_langcode: site_default
-language_alterable: false
+language_alterable: true
