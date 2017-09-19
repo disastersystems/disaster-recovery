@@ -1,0 +1,18 @@
+uuid: 3cea2f34-5e69-4580-abfd-343a55c7f4de
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_update
+id: node.recovery_update.changed
+field_name: changed
+entity_type: node
+bundle: recovery_update
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

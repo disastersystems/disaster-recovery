@@ -1,0 +1,18 @@
+uuid: 954689bb-3a9d-483c-9116-81cef9c772d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_alert
+id: node.recovery_alert.changed
+field_name: changed
+entity_type: node
+bundle: recovery_alert
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

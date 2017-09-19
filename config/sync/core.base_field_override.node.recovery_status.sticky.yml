@@ -1,0 +1,22 @@
+uuid: 7fc4c451-4538-4452-a60f-b64c7f17437c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_status
+id: node.recovery_status.sticky
+field_name: sticky
+entity_type: node
+bundle: recovery_status
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

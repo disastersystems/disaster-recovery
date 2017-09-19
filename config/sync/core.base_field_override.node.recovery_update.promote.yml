@@ -1,0 +1,22 @@
+uuid: a6a731be-dcb2-4df6-a948-cd4fdc7540c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_update
+id: node.recovery_update.promote
+field_name: promote
+entity_type: node
+bundle: recovery_update
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

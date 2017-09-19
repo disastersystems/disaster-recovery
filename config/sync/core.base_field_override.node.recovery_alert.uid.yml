@@ -1,0 +1,20 @@
+uuid: 47c7cdd8-fb98-471b-93a0-8da2f0e926f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_alert
+id: node.recovery_alert.uid
+field_name: uid
+entity_type: node
+bundle: recovery_alert
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
