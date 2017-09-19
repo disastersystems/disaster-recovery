@@ -22,6 +22,7 @@
         "drupal/console": "^1.0.1",
         "drupal/core": "~8.0",
         "drupal/geolocation": "^1.10",
+        "drupal/languageicons": "^1.0@beta",
         "drupal/page_manager": "^4.0@beta",
         "drupal/panels": "^4.2",
         "drupal/radix_layouts": "^4.0",
