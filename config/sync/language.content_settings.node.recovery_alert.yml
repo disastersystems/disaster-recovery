@@ -1,0 +1,16 @@
+uuid: 63833765-363a-4c59-a993-9544806a4454
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.recovery_alert
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.recovery_alert
+target_entity_type_id: node
+target_bundle: recovery_alert
+default_langcode: site_default
+language_alterable: true

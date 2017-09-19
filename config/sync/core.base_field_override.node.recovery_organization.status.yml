@@ -1,0 +1,22 @@
+uuid: 1cb070d0-c3a1-4971-9ba3-aff92051b792
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_organization
+id: node.recovery_organization.status
+field_name: status
+entity_type: node
+bundle: recovery_organization
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

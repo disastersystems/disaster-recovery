@@ -1,0 +1,22 @@
+uuid: 851460b4-7bee-4565-b2f6-8cbfe583a793
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_alert
+id: node.recovery_alert.status
+field_name: status
+entity_type: node
+bundle: recovery_alert
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

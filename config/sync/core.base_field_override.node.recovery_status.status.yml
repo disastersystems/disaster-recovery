@@ -1,0 +1,22 @@
+uuid: 19b4557e-041b-4f96-ae82-b5608a7bd557
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_status
+id: node.recovery_status.status
+field_name: status
+entity_type: node
+bundle: recovery_status
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: 27ab26b8-d5a2-4623-98ce-3f36d7be6e34
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_organization
+id: node.recovery_organization.promote
+field_name: promote
+entity_type: node
+bundle: recovery_organization
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

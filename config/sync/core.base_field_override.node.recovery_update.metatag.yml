@@ -1,0 +1,18 @@
+uuid: 20955f05-3e80-4183-9b51-fa856862d70c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.recovery_update
+id: node.recovery_update.metatag
+field_name: metatag
+entity_type: node
+bundle: recovery_update
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

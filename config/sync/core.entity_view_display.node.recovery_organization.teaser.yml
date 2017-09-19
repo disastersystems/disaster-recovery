@@ -63,3 +63,4 @@ hidden:
   field_description: true
   field_geofield: true
   field_website: true
+  langcode: true
