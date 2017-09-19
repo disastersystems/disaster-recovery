@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.recovery_update.field_message
+    - field.field.node.recovery_update.field_metatags
     - node.type.recovery_update
   module:
+    - metatag
     - path
     - text
 id: node.recovery_update.default
@@ -26,6 +28,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_metatags:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   langcode:
     type: language_select
