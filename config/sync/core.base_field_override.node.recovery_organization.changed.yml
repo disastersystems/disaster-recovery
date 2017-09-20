@@ -1,0 +1,18 @@
+uuid: f70e4350-1bb3-4c45-a649-eb815f9263fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_organization
+id: node.recovery_organization.changed
+field_name: changed
+entity_type: node
+bundle: recovery_organization
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

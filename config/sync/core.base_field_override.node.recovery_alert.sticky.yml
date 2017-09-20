@@ -1,0 +1,22 @@
+uuid: acccc5c1-fadc-4cb9-bf34-c895cfb5fded
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_alert
+id: node.recovery_alert.sticky
+field_name: sticky
+entity_type: node
+bundle: recovery_alert
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

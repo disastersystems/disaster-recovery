@@ -1,0 +1,8 @@
+uuid: 25b321f6-4ff5-449f-bc0b-09943caaf443
+langcode: es
+status: true
+dependencies: {  }
+id: node__recovery_update
+label: 'Content: Recovery Update'
+tags:
+  title: '[node:title] | [site:name]'

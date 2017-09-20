@@ -1,0 +1,20 @@
+uuid: 862de6d2-e0cd-4083-9761-894684003172
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_organization
+id: node.recovery_organization.uid
+field_name: uid
+entity_type: node
+bundle: recovery_organization
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

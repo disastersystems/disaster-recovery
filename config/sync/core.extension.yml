@@ -27,8 +27,11 @@ module:
   image: 0
   kint: 0
   knowledge_base_integration: 0
+  language: 0
+  languageicons: 0
   layout_discovery: 0
   link: 0
+  locale: 0
   menu_ui: 0
   metatag: 0
   node: 0
@@ -54,7 +57,6 @@ module:
   text: 0
   token: 0
   toolbar: 0
-  tour: 0
   twig_tweak: 0
   twig_tweak_extra: 0
   update: 0
@@ -63,6 +65,7 @@ module:
   menu_link_content: 1
   pathauto: 1
   xmlsitemap: 1
+  content_translation: 10
   views: 10
   disaster_recovery: 1000
 theme:

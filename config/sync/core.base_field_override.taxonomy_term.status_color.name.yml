@@ -1,0 +1,18 @@
+uuid: 38e8df5f-95d8-405f-b597-10d7f5ce5108
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.status_color
+id: taxonomy_term.status_color.name
+field_name: name
+entity_type: taxonomy_term
+bundle: status_color
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

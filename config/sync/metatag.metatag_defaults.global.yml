@@ -1,10 +1,11 @@
-uuid: 5ddcf015-3c99-45e8-b971-862308dcf362
+uuid: 9190b400-6de8-47d1-a436-79474e749e9c
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: b-qxCu1VLGWjqvXKv4Nt7y2BUo5VSGpEIj8gb6C_PUY
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
 id: global
 label: Global
 tags:
+  canonical_url: '[current-page:url]'
   title: '[current-page:title] | [site:name]'

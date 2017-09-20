@@ -1,0 +1,22 @@
+uuid: f56b9711-a8ea-4386-8c04-3496985a5156
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_organization
+id: node.recovery_organization.sticky
+field_name: sticky
+entity_type: node
+bundle: recovery_organization
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

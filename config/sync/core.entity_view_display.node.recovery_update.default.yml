@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.recovery_update.field_message
+    - field.field.node.recovery_update.field_metatags
     - node.type.recovery_update
   module:
+    - metatag
     - text
     - user
 id: node.recovery_update.default
@@ -20,9 +22,17 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_metatags:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
   links:
     weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  langcode: true
