@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains knowledge_base.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function knowledge_base_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the knowledge_base module.
+    case 'help.page.knowledge_base':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module will display all the knowledge base articles') . '</p>';
+      return $output;
+
+    default:
+  }
+}
