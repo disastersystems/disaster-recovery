@@ -1,1 +1,15 @@
-<a href="/node/{{node.id}}">{{label}}</a>
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    <a href="{{url}}">{{label}}</a>
+</article>

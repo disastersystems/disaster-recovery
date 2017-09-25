@@ -1,9 +1,6 @@
-a{
-    color: #0275D8;
+.panel:last-child{
+  margin-bottom: 20px;
 }
-.font-size-21{
-    font-size: 21px;
-}
-.view-row-padding {
-    padding: 35px;
+.date-grey {
+  color: #818A91;
 }
