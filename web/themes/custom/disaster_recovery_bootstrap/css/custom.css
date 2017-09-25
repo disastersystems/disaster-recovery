@@ -1,0 +1,13 @@
+.panel:last-child{
+  margin-bottom: 20px;
+}
+.date-grey {
+  color: #818A91;
+}
+.padding-20px{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.bg-grey{
+  background: #F5F5F5;
+}
