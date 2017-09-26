@@ -1,0 +1,28 @@
+uuid: 2bc6a7f2-d9cc-48e6-9d92-631af9568194
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.dontations
+  module:
+    - panels
+id: dontations-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  uuid: 514feab4-8325-4738-8915-56d8a474ca24
+  label: null
+  weight: 0
+  layout: radix_boxton
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: dontations-panels_variant-0
+  builder: ipe
+page: dontations
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }
