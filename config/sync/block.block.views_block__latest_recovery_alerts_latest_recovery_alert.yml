@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.latest_recovery_alerts
   module:
+    - system
     - views
   theme:
     - disaster_recovery_bootstrap
@@ -21,4 +22,9 @@ settings:
   label_display: '0'
   views_label: ''
   items_per_page: none
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/help-center"
+    negate: false
+    context_mapping: {  }
