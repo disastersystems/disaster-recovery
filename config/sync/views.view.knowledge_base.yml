@@ -162,7 +162,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Knowledge Base'
+      title: Topics
       header: {  }
       footer: {  }
       empty: {  }
@@ -264,6 +264,7 @@ display:
         filters: false
         filter_groups: false
         pager: false
+        title: false
       filter_groups:
         operator: AND
         groups:
@@ -273,6 +274,7 @@ display:
         options:
           items_per_page: 3
           offset: 0
+      title: Featured
     cache_metadata:
       max-age: -1
       contexts:
