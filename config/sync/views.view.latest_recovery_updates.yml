@@ -207,18 +207,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
-      footer:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content: '<h4 class="col-lg-12"><a href="/latest-updates">Read More</a></h4>'
-          plugin_id: text_custom
+      footer: {  }
       defaults:
         footer: false
     cache_metadata:
