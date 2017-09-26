@@ -8,6 +8,7 @@ package: 'Bootstrap'
 
 libraries:
   - disaster_recovery_bootstrap/global-css
+  - disaster_recovery_bootstrap/match-height
 
 regions:
   header: 'Header'
