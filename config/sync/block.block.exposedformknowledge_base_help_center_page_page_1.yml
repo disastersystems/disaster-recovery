@@ -1,0 +1,29 @@
+uuid: 8297e942-c0ea-4fef-bcce-eb9c1e70770c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.knowledge_base_help_center_page_
+  module:
+    - system
+    - views
+  theme:
+    - disaster_recovery_bootstrap
+id: exposedformknowledge_base_help_center_page_page_1
+theme: disaster_recovery_bootstrap
+region: content
+weight: -1
+provider: null
+plugin: 'views_exposed_filter_block:knowledge_base_help_center_page_-page_1'
+settings:
+  id: 'views_exposed_filter_block:knowledge_base_help_center_page_-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /help-center
+    negate: false
+    context_mapping: {  }
