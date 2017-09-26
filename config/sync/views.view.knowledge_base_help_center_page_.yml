@@ -1,20 +1,19 @@
-uuid: fbff7148-49dc-4ff0-b4be-5ab3b1a238ff
+uuid: 2468f4e4-807f-41fb-a7dc-714408af17c6
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.list
-    - node.type.knowledge_base
+    - search_api.index.disaster_index
+    - views.view.knowledge_base
   module:
-    - node
-    - user
+    - search_api
 id: knowledge_base_help_center_page_
 label: 'Knowledge Base (help center page)'
 module: views
 description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: search_api_index_disaster_index
+base_field: search_api_id
 core: 8.x
 display:
   default:
@@ -24,24 +23,20 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
-        options:
-          perm: 'access content'
+        type: none
+        options: {  }
       cache:
         type: tag
         options: {  }
       query:
         type: views_query
         options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
+          bypass_access: false
+          skip_access: false
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: 'Find Help'
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -49,7 +44,7 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: full
+        type: mini
         options:
           items_per_page: 15
           offset: 0
@@ -64,26 +59,24 @@ display:
             offset: false
             offset_label: Offset
           tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
-          quantity: 9
+            previous: ‹‹
+            next: ››
       style:
         type: default
       row:
-        type: 'entity:node'
+        type: search_api
         options:
-          relationship: none
-          view_mode: list
+          view_modes:
+            'entity:node':
+              knowledge_base: teaser
       fields:
         title:
-          id: title
-          table: node_field_data
+          table: search_api_index_disaster_index
           field: title
-          settings:
-            link_to_entity: true
-          plugin_id: field
+          id: title
+          entity_type: null
+          entity_field: null
+          plugin_id: search_api_field
           relationship: none
           group_type: group
           admin_label: ''
@@ -130,6 +123,7 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -140,45 +134,81 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            multi_separator: ', '
       filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            knowledge_base: knowledge_base
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_disaster_index
+          field: search_api_fulltext
           relationship: none
           group_type: group
           admin_label: ''
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            identifier: search_api_fulltext
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields:
+            title: title
+            field_description: field_description
+          plugin_id: search_api_fulltext
+      sorts:
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_disaster_index
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
           exposed: false
           expose:
             label: ''
-          granularity: second
-      title: 'Knowledge Base (help center page)'
-      header: {  }
+          plugin_id: search_api
+      title: 'How can we help you?'
+      header:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: Featured
+          empty: false
+          view_to_insert: 'knowledge_base:block_2'
+          inherit_arguments: false
+          plugin_id: view
       footer: {  }
       empty: {  }
       relationships: {  }
@@ -189,23 +219,23 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
       tags: {  }
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
     position: 1
     display_options:
       display_extenders: {  }
+      path: help-center
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
       tags: {  }

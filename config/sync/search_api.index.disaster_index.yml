@@ -1,0 +1,106 @@
+uuid: 58a1c3ee-65d8-42d0-8728-f4d1ac26915c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - search_api.server.disaster_server
+  module:
+    - search_api
+    - node
+id: disaster_index
+name: 'Disaster Index'
+description: ''
+read_only: false
+field_settings:
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 8
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+  status:
+    label: 'Publishing status'
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+  field_description:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_description
+    type: text
+    boost: !!float 5
+    dependencies:
+      config:
+        - field.storage.node.field_description
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - knowledge_base
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  rendered_item: {  }
+  entity_status: {  }
+  ignorecase:
+    all_fields: false
+    fields:
+      - title
+      - field_description
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  stemmer:
+    all_fields: false
+    fields:
+      - title
+      - field_description
+    exceptions:
+      texan: texa
+      mexican: mexic
+    weights:
+      preprocess_index: 0
+      preprocess_query: 0
+  tokenizer:
+    all_fields: false
+    fields:
+      - title
+      - field_description
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  transliteration:
+    all_fields: false
+    fields:
+      - title
+      - field_description
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  type_boost:
+    boosts:
+      'entity:node':
+        datasource_boost: !!float 1
+        bundle_boosts:
+          knowledge_base: !!float 1
+    weights:
+      preprocess_index: 0
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: disaster_server
