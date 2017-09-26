@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains disaster_alerts.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function disaster_alerts_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the disaster_alerts module.
+    case 'help.page.disaster_alerts':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Disaster Alerts') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function disaster_alerts_theme() {
+  return [
+    'disaster_alerts' => [
+      'render element' => 'children',
+    ],
+  ];
+}

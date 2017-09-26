@@ -1,0 +1,14 @@
+{
+  "name": "drupal/disaster_alerts",
+  "type": "drupal-module",
+  "description": "Disaster Alerts",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/disaster_alerts",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/disaster_alerts",
+    "source": "http://cgit.drupalcode.org/disaster_alerts"
+  },
+  "require": { }
+}
