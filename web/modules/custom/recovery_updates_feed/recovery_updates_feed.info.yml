@@ -1,0 +1,5 @@
+name: Recovery Updates Feed
+type: module
+description: Custom module to import latest updates from RSS Feed.
+core: 8.x
+package: Disaster Recovery

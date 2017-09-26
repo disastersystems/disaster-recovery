@@ -1,0 +1,16 @@
+uuid: 3ca028e6-f2cb-4685-b294-996ec3f3b8b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.recovery_status
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.recovery_status
+target_entity_type_id: node
+target_bundle: recovery_status
+default_langcode: site_default
+language_alterable: true

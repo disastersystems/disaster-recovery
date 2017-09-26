@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.recovery_update.field_message
     - node.type.recovery_update
   module:
+    - text
     - user
 id: node.recovery_update.teaser
 targetEntityType: node
@@ -14,11 +15,12 @@ bundle: recovery_update
 mode: teaser
 content:
   field_message:
-    type: basic_string
+    type: text_default
     weight: 0
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
 hidden:
+  langcode: true
   links: true

@@ -1,0 +1,18 @@
+uuid: bb192f8a-06a1-4cd7-b028-698acc8bef12
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recovery_organization
+id: node.recovery_organization.created
+field_name: created
+entity_type: node
+bundle: recovery_organization
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

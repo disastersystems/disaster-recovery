@@ -1,0 +1,20 @@
+uuid: 401375e1-2d87-4cc8-8f33-b0f34cd69973
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.status_color
+  module:
+    - path
+id: taxonomy_term.status_color.path
+field_name: path
+entity_type: taxonomy_term
+bundle: status_color
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -42,7 +42,7 @@ class KnowledgeBaseSearchBlock extends BlockBase {
     $endpoint = \Drupal::config('knowledge_base_integration.endpoint')->get('knowledge_base');
     $results = $this->createHttpRequest($endpoint);
     $articles = $results->articles;
-    $latest_articles = array_splice($articles, 0, 5);
+    $latest_articles = array_splice($articles, 0, 6);
     return $latest_articles;
   }
   /**

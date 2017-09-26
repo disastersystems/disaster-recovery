@@ -1,0 +1,25 @@
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{% set date = node.createdtime|format_date('help') %}
+
+<article{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+  <div class="row">
+    <div class="col-md-9 col-md-push-3">
+      <h4>{{label}}</h4>
+      {{content.field_description}}
+      <a href="{{url}}">Read More</a>
+    </div>
+    <div class="col-md-3 col-md-pull-9">
+      <div class="date-grey">{{ date }}</div>
+    </div>
+  </div>
+</article>

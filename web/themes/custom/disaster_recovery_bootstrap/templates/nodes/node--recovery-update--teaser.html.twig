@@ -1,0 +1,26 @@
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{% set date = node.createdtime|format_date('help') %}
+
+<article{{ attributes.addClass(classes) }}>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{date}}</h3>
+  </div>
+  <div class="panel-body" data-mh="mh-update">
+    <h3 class="">{{ label }}</h3>
+    <a href="{{url}}">Read Update</a>
+  </div>
+</div>
+</article>
+
+
+

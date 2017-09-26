@@ -1,0 +1,6 @@
+recovery_updates_feed.recovery_updates_feed_rss_endpoint:
+  title: 'Recovery Updates RSS Endpoint'
+  route_name: recovery_updates_feed.recovery_updates_feed_rss_endpoint
+  description: 'Recovery Updates RSS Endpoint'
+  parent: system.admin_config_system
+  weight: 99
