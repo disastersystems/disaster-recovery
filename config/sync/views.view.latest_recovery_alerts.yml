@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - node.type.recovery_alert
   module:
     - node
@@ -58,7 +59,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: default
+          view_mode: teaser
       fields:
         title:
           id: title

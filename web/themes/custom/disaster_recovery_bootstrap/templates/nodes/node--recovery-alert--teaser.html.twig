@@ -8,12 +8,7 @@
     'clearfix',
   ]
 %}
-{% set date = node.createdtime|format_date('help') %}
-
 <article{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  <div class="row">
-    <div class="col-md-2 col-md-offset-2">{{ date }}</div>
-    <div class="col-md-8"><h1>{{label.0}}</h1></div>
-  </div>
+    {{ title_prefix }}
+    {{label}}
 </article>
