@@ -1,0 +1,12 @@
+uuid: efb508ba-52a7-40cd-9818-f881c7c3ed31
+langcode: en
+status: true
+dependencies: {  }
+id: dontations
+label: Dontations
+description: ''
+use_admin_theme: false
+path: /dontations
+access_logic: and
+access_conditions: {  }
+parameters: {  }
