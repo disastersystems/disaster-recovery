@@ -20,6 +20,21 @@ bash install.sh
 
 This will install the site, import existing configuration and generate one time login link for you.
 
+## Migrating Data
+```
+MUST create term "Shelters" under Resources vocabulary
+docker-compose exec --user 82 php drush cr --root=/var/www/html/web
+docker-compose exec --user 82 php drush import-organization --root=/var/www/html/web
+```
+## Update Configuration
+**IMPORTANT:** Only need to do this to get latest updates.
+```
+bash update.sh
+```
+
+- If you have this error `Entities exist of type Shortcut link and Default. These entities need to be deleted before importing.`, replace uuid in `shortcut.set.default.yml` with null then try to re-import again. Here's a link to the [bug](https://www.drupal.org/node/2583113) report in the D8 issue queue.
+
+### For developer only:
 ## Export Configuration
 
 ```
@@ -27,22 +42,6 @@ docker-compose exec --user 82 php drush config-export --root=/var/www/html/web
 ```
 
 **IMPORTANT:** Only commit files related to your features only.
-
-## Synchronize Configuration
-
-```
-git pull
-docker-compose exec --user 82 php drush config-import --root=/var/www/html/web
-```
-
-- If you have this error `Entities exist of type Shortcut link and Default. These entities need to be deleted before importing.`, replace uuid in `shortcut.set.default.yml` with null then try to re-import again. Here's a link to the [bug](https://www.drupal.org/node/2583113) report in the D8 issue queue.
-
-## Migrating Data
-```
-create term "Shelters" under Resources vocabulary
-docker-compose exec --user 82 php drush cr --root=/var/www/html/web
-docker-compose exec --user 82 php drush import-organization --root=/var/www/html/web
-```
 
 ## Sponsors
 
