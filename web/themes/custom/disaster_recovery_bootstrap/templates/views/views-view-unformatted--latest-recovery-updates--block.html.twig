@@ -17,6 +17,7 @@
  * @ingroup themeable
  */
 #}
+<div class="row">
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
@@ -24,11 +25,11 @@
   {%
     set row_classes = [
       default_row_class ? 'views-row',
-      'col-md-4',
-      'col-xs-12',
+      'col-sm-4',
     ]
   %}
   <div{{ row.attributes.addClass(row_classes) }}>
     {{ row.content }}
   </div>
 {% endfor %}
+</div>
