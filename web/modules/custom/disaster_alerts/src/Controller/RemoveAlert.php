@@ -19,8 +19,8 @@ class RemoveAlert extends ControllerBase {
    *   Return Hello string.
    */
   public function remove_alert_init(Request $request) {
-      $number = $request->query->get('From');
-      $body = $request->query->get('Body');
+      $number = $_POST['From'];
+      $body = $_POST['Body'];
 
       if($body == 'STOP'){
 
