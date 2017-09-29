@@ -26,11 +26,13 @@ class RemoveAlert extends ControllerBase {
 
       if($body == 'STOP'){
         $response->message("did you just said stop?");
+        return $response;
       }else{
         $response->message("The Robots are coming! Head for the hills!");
+        return $response;
       }
 
-      return $response;
+
   }
 
   private function _setPhoneStatus($phone_number){
