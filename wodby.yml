@@ -5,5 +5,5 @@ pipeline:
    directory: $APP_ROOT
  - name: Build site
    type: command
-   command: drush si disaster_recovery --config-dir=/var/www/html/config/sync --root=/var/www/html/web -y
+   command: drush si disaster_recovery --account-name=juan --account-mail=juan.cubeddu@gmail.com --account-pass=qazwsx123 --config-dir=/var/www/html/config/sync --root=/var/www/html/web -y
    directoy: /var/www/html/web
