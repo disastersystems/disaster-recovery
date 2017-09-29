@@ -26,7 +26,7 @@ function disaster_alerts_schema() {
       'phone_number' => array('description' => 'Phone Number.', 'type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '', ),
       'status'    => array('type' => 'int', 'not null' => TRUE, 'default' => 1),
     ),
-    'primary key' => array('aid'),
+    'primary key' => array('p_id'),
   );
 
   return $schema;
