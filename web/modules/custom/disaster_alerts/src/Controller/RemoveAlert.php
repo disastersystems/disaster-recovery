@@ -4,6 +4,7 @@ namespace Drupal\disaster_alerts\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class RemoveAlert.
@@ -16,19 +17,22 @@ class RemoveAlert extends ControllerBase {
    * @return string
    *   Return Hello string.
    */
-  public function remove_alert_init() {
+  public function remove_alert_init(Request $request) {
       $number = $_POST['From'];
       $body = $_POST['Body'];
 
       if($body == 'STOP'){
-        $xml = '<Response>';
+
+        $xml = '<?xml version="1.0" encoding="UTF-8"?>';
+        $xml .= '<Response>';
         $xml .= '<Message>';
         $xml .= 'you been removed';
         $xml .= '</Message>';
         $xml .= '</Response>';
         $this->_setPhoneStatus($number);
       }else{
-        $xml = '<Response>';
+        $xml = '<?xml version="1.0" encoding="UTF-8"?>';
+        $xml .= '<Response>';
         $xml .= '<Message>';
         $xml .= 'Hello '.$number.'.';
         $xml .= 'You said '.$body.'';
