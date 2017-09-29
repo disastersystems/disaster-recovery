@@ -6,7 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
-
+use Drupal\disaster_alerts\Controller\SendAlert;
 /**
  * Implements hook_help().
  */
@@ -32,4 +32,20 @@ function disaster_alerts_theme() {
       'render element' => 'children',
     ],
   ];
+}
+
+/**
+* Implements hook_entity_insert().
+*/
+function disaster_alerts_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() !== 'node' || ($entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'recovery_alert')) {
+    return;
+  }
+  $send_alert = new SendAlert();
+  $phone_numbers = $send_alert->_getAllPhoneNumbers();
+  $message = $entity->label();
+  foreach ($phone_numbers as $person){
+    $send_alert->send_alert_init($person->phone_number, $message);
+  }
+
 }

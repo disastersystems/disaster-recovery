@@ -27,7 +27,6 @@ class CreateAlert extends ControllerBase {
     $client = new Client($sid, $token);
 
     $phone = $request->query->get('phone');
-
     $encoded = rawurlencode($phone);
     try {
       $number = $client->lookups
@@ -63,9 +62,11 @@ class CreateAlert extends ControllerBase {
 
   }
 
+
   private function _isPhoneInDB($phone_number){
     $db = \Drupal::database();
     $rows = $db->query('SELECT * from disaster_alerts WHERE phone_number = '.$phone_number.' ');
+
     if(!$rows->fetchAssoc()){
       $this->_addNewPhone($phone_number);
     } else {

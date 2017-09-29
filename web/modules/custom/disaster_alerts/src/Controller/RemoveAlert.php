@@ -17,8 +17,8 @@ class RemoveAlert extends ControllerBase {
    *   Return Hello string.
    */
   public function remove_alert_init() {
-      $number = '+12108430634';
-      $body = 'STOP';
+      $number = $_POST['From'];
+      $body = $_POST['Body'];
 
       if($body == 'STOP'){
         $xml = '<Response>';

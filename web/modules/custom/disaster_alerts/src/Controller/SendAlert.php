@@ -17,7 +17,7 @@ class SendAlert extends ControllerBase {
    * @return string
    *   Return Hello string.
    */
-  public function send_alert_init() {
+  public function send_alert_init($phone_number, $alert) {
 
     $config = \Drupal::config('disaster_alerts.disasteralert');
 
@@ -28,15 +28,17 @@ class SendAlert extends ControllerBase {
     $client = new Client($account_sid, $auth_token);
 
     $client->messages->create(
-        '_phone_here',
+        $phone_number,
         ["from" => $twilio_phone_number,
-        "body" => "just saying hi, see ya soon!"]
+        "body" => $alert]
     );
+  }
 
-    return [
-      '#type' => 'markup',
-      '#markup' => $this->t('Implement method: send_alert_init')
-    ];
+  public function _getAllPhoneNumbers(){
+    $db = \Drupal::database();
+    $rows = $db->query('SELECT * from disaster_alerts WHERE status = 1');
+    return $rows->fetchAll();
+
   }
 
 }

@@ -53,7 +53,7 @@ class DisasterAlertForm extends ConfigFormBase {
       '#description' => $this->t('Get your phone number from https://twilio.com/console (+12223334455 use this format)'),
       '#maxlength' => 120,
       '#size' => 64,
-      '#default_value' => $config->get('authtoken'),
+      '#default_value' => $config->get('twillio_phone'),
     ];
     $form['phone_number_endpoint'] = [
       '#type' => 'text_format',
