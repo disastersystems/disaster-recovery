@@ -3,8 +3,10 @@
 namespace Drupal\disaster_alerts\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+require DRUPAL_ROOT.'/../vendor/autoload.php';
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use Twilio\Twiml;
 
 /**
  * Class RemoveAlert.
@@ -18,30 +20,15 @@ class RemoveAlert extends ControllerBase {
    *   Return Hello string.
    */
   public function remove_alert_init(Request $request) {
-      $number = $_POST['From'];
-      $body = $_POST['Body'];
+      $number = $request->query->get('From');
+      $body = $request->query->get('Body');
+      $response = new Twiml;
 
       if($body == 'STOP'){
-
-        $xml = '<?xml version="1.0" encoding="UTF-8"?>';
-        $xml .= '<Response>';
-        $xml .= '<Message>';
-        $xml .= 'you been removed';
-        $xml .= '</Message>';
-        $xml .= '</Response>';
-        $this->_setPhoneStatus($number);
+        $response->message("did you just said stop?");
       }else{
-        $xml = '<?xml version="1.0" encoding="UTF-8"?>';
-        $xml .= '<Response>';
-        $xml .= '<Message>';
-        $xml .= 'Hello '.$number.'.';
-        $xml .= 'You said '.$body.'';
-        $xml .= '</Message>';
-        $xml .= '</Response>';
+        $response->message("The Robots are coming! Head for the hills!");
       }
-
-      $response = new Response($xml);
-      $response->headers->set('Content-Type', 'xml');
 
       return $response;
   }
@@ -54,3 +41,6 @@ class RemoveAlert extends ControllerBase {
   }
 
 }
+
+
+
