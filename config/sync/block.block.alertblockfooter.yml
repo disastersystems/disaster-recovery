@@ -1,0 +1,25 @@
+uuid: 7f8b3471-09d5-4ce3-a1ec-a10e8c65ed42
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:everything_block:721059fb-bf17-4b64-825a-e2a022b43743'
+  module:
+    - block_content
+  theme:
+    - disaster_recovery_bootstrap
+id: alertblockfooter
+theme: disaster_recovery_bootstrap
+region: footer
+weight: -3
+provider: null
+plugin: 'block_content:721059fb-bf17-4b64-825a-e2a022b43743'
+settings:
+  id: 'block_content:721059fb-bf17-4b64-825a-e2a022b43743'
+  label: 'Alert block footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

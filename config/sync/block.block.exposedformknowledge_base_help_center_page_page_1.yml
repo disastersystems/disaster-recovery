@@ -12,7 +12,7 @@ dependencies:
 id: exposedformknowledge_base_help_center_page_page_1
 theme: disaster_recovery_bootstrap
 region: content
-weight: -1
+weight: -3
 provider: null
 plugin: 'views_exposed_filter_block:knowledge_base_help_center_page_-page_1'
 settings:
@@ -20,7 +20,7 @@ settings:
   label: ''
   provider: views
   label_display: visible
-  views_label: ''
+  views_label: 'How can we help you?'
 visibility:
   request_path:
     id: request_path

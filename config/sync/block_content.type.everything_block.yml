@@ -1,0 +1,8 @@
+uuid: 7dc1638f-206b-4fad-a353-9b7e149ad0b9
+langcode: en
+status: true
+dependencies: {  }
+id: everything_block
+label: 'everything block'
+revision: 0
+description: ''
