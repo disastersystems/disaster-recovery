@@ -22,8 +22,7 @@ class RemoveAlert extends ControllerBase {
       $number = $_POST['From'];
       $body = $_POST['Body'];
 
-      if($body == 'STOP'){
-
+      if (strcasecmp($body, 'stop') == 0) {
         $xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
         $xml .= "<Response>\n";
         $xml .= "<Message>\n";

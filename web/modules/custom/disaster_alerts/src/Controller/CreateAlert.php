@@ -70,7 +70,7 @@ class CreateAlert extends ControllerBase {
     if(!$rows->fetchAssoc()){
       $this->_addNewPhone($phone_number);
     } else {
-      echo 'sorrry number already on the DB';
+      echo 'sorry number already on the DB';
     }
 
   }
