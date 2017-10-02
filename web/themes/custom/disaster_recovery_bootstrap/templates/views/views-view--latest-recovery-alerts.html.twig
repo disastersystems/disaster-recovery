@@ -30,12 +30,10 @@
  * @see template_preprocess_views_view()
  */
 #}
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xl-12 col-sm-6 col-lg-6">
       {%
         set classes = [
           dom_id ? 'js-view-dom-id-' ~ dom_id,
+          'row'
         ]
       %}
       <div{{ attributes.addClass(classes) }}>
@@ -67,6 +65,3 @@
 
         {{ feed_icons }}
       </div>
-    </div>
-  </div>
-</div>

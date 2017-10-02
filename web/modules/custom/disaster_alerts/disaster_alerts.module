@@ -24,12 +24,26 @@ function disaster_alerts_help($route_name, RouteMatchInterface $route_match) {
 }
 
 /**
+ * Implements hook_page_attachments().
+ */
+ function disaster_alerts_page_attachments(array &$page) {
+
+    // Do not add libraries during installation steps.
+    if (drupal_installation_attempted()) {
+      return;
+    }
+
+    $page['#attached']['library'][] = 'disaster_alerts/libraries';
+
+  }
+
+/**
  * Implements hook_theme().
  */
 function disaster_alerts_theme() {
   return [
     'disaster_alerts' => [
-      'render element' => 'children',
+      'variables' => ['node' => NULL],
     ],
   ];
 }

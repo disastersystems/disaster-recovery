@@ -1,0 +1,6 @@
+libraries:
+  js:
+    js/alerts.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
