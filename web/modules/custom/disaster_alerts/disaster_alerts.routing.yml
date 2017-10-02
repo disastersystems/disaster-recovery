@@ -33,3 +33,11 @@ disaster_alerts.remove_alert_remove_alert_init:
     _title: 'Remove Alert Disaster'
   requirements:
     _permission: 'access content'
+
+disaster_alerts.add_phone_number_form:
+  path: '/disaster_alerts/phonenumber'
+  defaults:
+    _form: '\Drupal\disaster_alerts\Form\AddPhoneNumber'
+    _title: 'AddPhoneNumber'
+  requirements:
+    _access: 'TRUE'
