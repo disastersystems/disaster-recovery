@@ -6,7 +6,7 @@
 [![Slack Status](https://disastersystems.herokuapp.com/badge.svg)](http://slack.disastersystems.org/)
 
 ## Requirements
-- [Docker Community Edition for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac) - Ensure Docker is installed and running
+- [Docker Community Edition for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac) - Ensure Docker is installed and running or for [Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows)
 - [Composer](https://getcomposer.org/) - Ensure composer is installed
 
 ## Installation
