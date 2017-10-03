@@ -6,8 +6,8 @@
 [![Slack Status](https://disastersystems.herokuapp.com/badge.svg)](http://slack.disastersystems.org/)
 
 ## Requirements
-- [Docker Community Edition for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac){:target="_blank"} - Ensure Docker is installed and running or for [Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows){:target="_blank"}
-- <a href="https://getcomposer.org/" target="_blank">Composer</a>[Composer]() - Ensure composer is installed
+- [Docker Community Edition for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac) - Ensure Docker is installed and running or for [Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+- [Composer](https://getcomposer.org/) - Ensure composer is installed
 
 ## Installation
 
