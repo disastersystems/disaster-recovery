@@ -7,7 +7,7 @@
 
 ## Requirements
 - [Docker Community Edition for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac){:target="_blank"} - Ensure Docker is installed and running or for [Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows){:target="_blank"}
-- [Composer](https://getcomposer.org/){:target="_blank"} - Ensure composer is installed
+- <a href="https://getcomposer.org/" target="_blank">Composer</a>[Composer]() - Ensure composer is installed
 
 ## Installation
 
