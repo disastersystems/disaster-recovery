@@ -6,7 +6,7 @@ use Drupal\Core\Controller\ControllerBase;
 require DRUPAL_ROOT.'/../vendor/autoload.php';
 use Twilio\Rest\Client;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Drupal\disaster_alerts\Helper;
 
 /**
  * Class CreateAlert.
@@ -37,31 +37,17 @@ class CreateAlert extends ControllerBase {
           array("type" => "caller-name")
         );
 
-      $rows  = $this->_isPhoneInDB($number->phoneNumber);
-      if(!$rows->fetchAssoc()){
+      $add_phone_db  = $this->_isPhoneInDB($number->phoneNumber);
+      if($add_phone_db){
         $this->_addNewPhone($number->phoneNumber);
-        $response = new JsonResponse();
-        $response->setData([
-          'data' => 'phone created'
-        ]);
+        return Helper::responseHelper('You are now signed up!');
 
-        return $response;
       } else {
-        $response = new JsonResponse();
-        $response->setData([
-          'data' => 'already in db'
-        ]);
-
-        return $response;
+        return Helper::responseHelper('Oopps, Your phone is already in our system');
       }
 
     } catch (\Exception $e) {
-      $response = new JsonResponse();
-      $response->setData([
-        'data' => 'not a valid phone number'
-      ]);
-
-      return $response;
+      return Helper::responseHelper('Make sure you use a valid phone number');
     }
   }
 
@@ -78,11 +64,12 @@ class CreateAlert extends ControllerBase {
 
   }
 
-
   private function _isPhoneInDB($phone_number){
     $db = \Drupal::database();
     $rows = $db->query('SELECT * from disaster_alerts WHERE phone_number = '.$phone_number.' ');
-    return $rows;
+    $create_phone = !$rows->fetchAssoc();
+
+    return $create_phone;
   }
 
 }
