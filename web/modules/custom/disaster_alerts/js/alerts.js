@@ -15,7 +15,6 @@
                 console.log('ERROR (thrownError): ', thrownError);
               },
               success: function(data) {
-                console.log('made it')
                 $(".the-return").html("<p> " + data.data + "</p>");
               }
             });
@@ -33,7 +32,6 @@
                 console.log('ERROR (thrownError): ', thrownError);
               },
               success: function(data) {
-                console.log('made it here too')
                 $(".the-return-footer").html("<p> " + data.data + "</p>");
               }
             });
