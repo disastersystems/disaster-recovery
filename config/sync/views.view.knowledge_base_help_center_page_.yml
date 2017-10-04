@@ -198,6 +198,19 @@ display:
           plugin_id: search_api
       title: 'How can we help you?'
       header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<h2 class="container-fluid text-center">Featured</h2>'
+            format: full_html
+          plugin_id: text
         view:
           id: view
           table: views
