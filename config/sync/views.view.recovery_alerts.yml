@@ -233,7 +233,20 @@ display:
             label: ''
           granularity: second
       title: Alerts
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<h1 class="container-fluid text-center padding-20px">Alerts</h1>'
+            format: full_html
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships: {  }
