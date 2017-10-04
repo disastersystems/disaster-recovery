@@ -50,6 +50,7 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
+    'alerts-block',
     'clearfix',
     'container-fluid',
     'pull-right'
@@ -63,7 +64,7 @@
   {{ title_suffix }}
 
   {% block content %}
-    <div class="form--inline form-inline clearfix">
+    <div class="form--inline form-inline clearfix alert-header">
     {{ drupal_form('Drupal\\disaster_alerts\\Form\\AddPhoneNumber') }}
     <span class="the-return"></span>
     </div>
