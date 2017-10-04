@@ -3,7 +3,7 @@
     attach: function (context, settings) {
       $('body').once('alerts').each(function() {
         $(document).ready(function() {
-          $('.alert-header > .add-phone-number-form > #edit-submit').on('click', function(e) {
+          $('.alert-header > .add-phone-number-form > .alerts-submit').on('click', function(e) {
             e.preventDefault();
             $.ajax({
               type: "POST",
@@ -20,12 +20,12 @@
             });
 
           })
-          $('.footer-alert > form.add-phone-number-form > #edit-submit').on('click', function(e) {
+          $('.footer-alert > form.add-phone-number-form > .alerts-submit').on('click', function(e) {
             e.preventDefault();
             $.ajax({
               type: "POST",
               url: "/disaster_alerts/alert_init",
-              data: $('.footer-alert > form.add-phone-number-form').serializeArray(),
+              data: $('.footer-alert > #add-phone-number-form').serializeArray(),
               error: function (xhr, ajaxOptions, thrownError) {
                 console.log('ERROR (xhr): ', xhr);
                 console.log('ERROR (ajaxOptions): ', ajaxOptions);
