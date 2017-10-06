@@ -40,5 +40,3 @@ dependencies:
     module:
       - migrate_plus
       - migrate_tools
-_core:
-  default_config_hash: OpQeZgZzZnfZfY0C6FiUxVWHH7nYcQxwsINJgkh-GB4
