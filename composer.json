@@ -24,6 +24,8 @@
         "drupal/geolocation": "^1.10",
         "drupal/languageicons": "^1.0@beta",
         "drupal/metatag": "1.x-dev",
+        "drupal/migrate_plus": "^4.0",
+        "drupal/migrate_tools": "^4.0",
         "drupal/page_manager": "^4.0@beta",
         "drupal/panels": "^4.2",
         "drupal/radix_layouts": "^4.0",

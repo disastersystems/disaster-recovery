@@ -1,0 +1,9 @@
+name: Sample Content
+type: module
+description: Module that generate meaningful sample content.
+core: 8.x
+package: platform
+dependencies:
+  - migrate
+  - migrate_plus
+  - migrate_tools
