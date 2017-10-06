@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: knowledge_base
+label: 'Knowledge Base'
+description: ''
+use_admin_theme: false
+path: /knowledge-base
+access_logic: and
+access_conditions: {  }
+parameters: {  }

@@ -1,0 +1,23 @@
+uuid: 6a6472cb-14d0-4b1b-b9cf-b5e7bacb2a2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.knowledge_base
+  module:
+    - text
+_core:
+  default_config_hash: pgAsdPo-Iu6qBGPwCY6Y1-bWw5lS6AHGENNP1yTiu44
+id: node.knowledge_base.field_description
+field_name: field_description
+entity_type: node
+bundle: knowledge_base
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

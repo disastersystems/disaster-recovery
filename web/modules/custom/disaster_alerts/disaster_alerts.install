@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function disaster_alerts_install() {
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function disaster_alerts_uninstall() {
+
+}
+
+/**
+ * Implements hook_schema().
+ */
+function disaster_alerts_schema() {
+  $schema['disaster_alerts'] = array(
+    'description' => 'Table that contains disaster alert.',
+    'fields' => array(
+      'p_id' => array('type' => 'serial', 'not null' => TRUE, 'description' => 'Primary Key: Unique apply ID.',),
+      'created' => array( 'type' => 'int', 'not null' => TRUE, 'default' => 0, 'description' => 'Unix timestamp of when query occurred.', ),
+      'phone_number' => array('description' => 'Phone Number.', 'type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '', ),
+      'status'    => array('type' => 'int', 'not null' => TRUE, 'default' => 1),
+    ),
+    'primary key' => array('p_id'),
+  );
+
+  return $schema;
+}

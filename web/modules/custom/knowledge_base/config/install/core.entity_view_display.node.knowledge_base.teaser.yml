@@ -1,0 +1,29 @@
+uuid: 5a086975-aa02-4524-990c-1d8ce9a88949
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.knowledge_base.field_description
+    - field.field.node.knowledge_base.field_featured
+    - node.type.knowledge_base
+  module:
+    - user
+id: node.knowledge_base.teaser
+targetEntityType: node
+bundle: knowledge_base
+mode: teaser
+content:
+  field_featured:
+    type: boolean
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+hidden:
+  field_description: true
+  links: true

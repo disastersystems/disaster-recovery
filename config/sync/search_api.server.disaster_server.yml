@@ -1,0 +1,17 @@
+uuid: d3b96add-9575-4444-ad61-d47752a15e01
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: disaster_server
+name: 'Disaster server'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  partial_matches: false
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

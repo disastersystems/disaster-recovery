@@ -1,0 +1,28 @@
+uuid: 1543be26-862c-4547-b361-3c6aa8852cdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topics
+    - node.type.knowledge_base
+    - taxonomy.vocabulary.topics
+id: node.knowledge_base.field_topics
+field_name: field_topics
+entity_type: node
+bundle: knowledge_base
+label: Topics
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      topics: topics
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

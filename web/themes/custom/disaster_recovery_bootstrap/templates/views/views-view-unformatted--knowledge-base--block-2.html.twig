@@ -1,0 +1,17 @@
+<div class="row">
+{% for row in rows %}
+{%
+set row_classes = [
+default_row_class ? 'views-row',
+'col-sm-4',
+]
+%}
+<div{{ row.attributes.addClass(row_classes) }}>
+    <div class="panel panel-default">
+    <div class="panel-body text-center view-row-padding">
+        {{ row.content }}
+    </div>
+    </div>
+</div>
+{% endfor %}
+</div>

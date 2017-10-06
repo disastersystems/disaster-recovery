@@ -5,12 +5,13 @@ dependencies:
   config:
     - views.view.latest_recovery_alerts
   module:
+    - system
     - views
   theme:
     - disaster_recovery_bootstrap
 id: views_block__latest_recovery_alerts_latest_recovery_alert
 theme: disaster_recovery_bootstrap
-region: content
+region: header
 weight: -1
 provider: null
 plugin: 'views_block:latest_recovery_alerts-latest_recovery_alert'
@@ -21,4 +22,9 @@ settings:
   label_display: '0'
   views_label: ''
   items_per_page: none
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/help-center"
+    negate: false
+    context_mapping: {  }

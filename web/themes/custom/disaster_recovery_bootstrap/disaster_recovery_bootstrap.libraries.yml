@@ -1,0 +1,13 @@
+global-css:
+  css:
+    theme:
+      css/custom.css: {}
+
+match-height:
+  remote: https://github.com/liabru/jquery-match-height
+  version: 0.7.2
+  license:
+    name: MIT
+    url: https://github.com/liabru/jquery-match-height/blob/master/LICENSE
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js: { type: external, minified: true }

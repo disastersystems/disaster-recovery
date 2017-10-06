@@ -1,0 +1,51 @@
+uuid: 6c65f66f-35d5-45b9-90a2-a5083ff4ac60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.knowledge_base.field_description
+    - field.field.node.knowledge_base.field_featured
+    - field.field.node.knowledge_base.field_topics
+    - node.type.knowledge_base
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: a1GalbeeyP_gaGZ072yq4uFZ8NTsaxJ7L0P8kviDyaA
+id: node.knowledge_base.default
+targetEntityType: node
+bundle: knowledge_base
+mode: default
+content:
+  field_description:
+    weight: 102
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_featured:
+    weight: 103
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_topics:
+    weight: 104
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

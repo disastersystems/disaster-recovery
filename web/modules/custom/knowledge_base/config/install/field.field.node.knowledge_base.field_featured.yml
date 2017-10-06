@@ -1,0 +1,23 @@
+uuid: 3a9de92c-2f63-4d6e-b307-812ec2b95678
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured
+    - node.type.knowledge_base
+id: node.knowledge_base.field_featured
+field_name: field_featured
+entity_type: node
+bundle: knowledge_base
+label: Featured
+description: 'To mark this knowledge base article as featured.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

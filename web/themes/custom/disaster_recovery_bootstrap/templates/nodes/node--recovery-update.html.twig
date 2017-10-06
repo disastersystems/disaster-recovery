@@ -1,0 +1,23 @@
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+{% set date = node.createdtime|format_date('help') %}
+{% set updated = node.changed.value|format_date('help') %}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  <div class="row container">
+    <div class="col-md-2 col-md-offset-2">{{ date }}</div>
+    <div class="col-md-8"><h1>{{label.0}}</h1></div>
+  </div>
+  <div class="row padding-20px breadcrumb">
+    <div class="col-md-6 col-md-offset-4">{{content.field_message}}</div>
+  </div>
+</article>

@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * Contains disaster_alerts.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\disaster_alerts\Controller\SendAlert;
+/**
+ * Implements hook_help().
+ */
+function disaster_alerts_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the disaster_alerts module.
+    case 'help.page.disaster_alerts':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Disaster Alerts') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+ function disaster_alerts_page_attachments(array &$page) {
+
+    // Do not add libraries during installation steps.
+    if (drupal_installation_attempted()) {
+      return;
+    }
+
+    $page['#attached']['library'][] = 'disaster_alerts/libraries';
+
+  }
+
+/**
+ * Implements hook_theme().
+ */
+function disaster_alerts_theme() {
+  return [
+    'disaster_alerts' => [
+      'variables' => ['node' => NULL],
+    ],
+  ];
+}
+
+/**
+* Implements hook_entity_insert().
+*/
+function disaster_alerts_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() !== 'node' || ($entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'recovery_alert')) {
+    return;
+  }
+  $send_alert = new SendAlert();
+  $phone_numbers = $send_alert->_getAllPhoneNumbers();
+  $message = $entity->label();
+  foreach ($phone_numbers as $person){
+    $send_alert->send_alert_init($person->phone_number, $message);
+  }
+
+}

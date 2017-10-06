@@ -1,0 +1,28 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'clearfix',
+    'container-fluid',
+    'text-center'
+  ]
+%}
+<section{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <h1{{ title_attributes.addClass(['lead']) }}>How can we help you?</h1>
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+
+  {# use this for the box version
+   <div class="panel panel-default col-md-6 col-md-offset-3">
+    <div class="panel-body text-center view-row-padding">
+      <h1{{ title_attributes.addClass(['lead']) }}>How can we help you?</h1>
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+    </div>
+  </div> #}
+</section>

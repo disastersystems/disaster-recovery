@@ -4,9 +4,9 @@ status: true
 dependencies:
   config:
     - page_manager.page.home
+    - views.view.knowledge_base
     - views.view.latest_recovery_updates
   module:
-    - knowledge_base_integration
     - panels
     - views
 id: home-panels_variant-0
@@ -14,15 +14,6 @@ label: Home
 variant: panels_variant
 variant_settings:
   blocks:
-    ce6cb4ad-fe54-4d51-a1eb-fc40b982e0be:
-      id: knowledge_base_search_block
-      label: 'Knowledge Base Search Block'
-      provider: knowledge_base_integration
-      label_display: '0'
-      region: contentmain
-      weight: 1
-      uuid: ce6cb4ad-fe54-4d51-a1eb-fc40b982e0be
-      context_mapping: {  }
     5d6d15bd-9926-4e39-b447-6e00be6d978a:
       id: 'views_block:latest_recovery_updates-block'
       label: Updates
@@ -31,8 +22,30 @@ variant_settings:
       views_label: Updates
       items_per_page: none
       region: contentmain
-      weight: 2
+      weight: 1
       uuid: 5d6d15bd-9926-4e39-b447-6e00be6d978a
+      context_mapping: {  }
+    26f7c9ca-5c17-4655-bb12-068eb6a31eaf:
+      id: 'views_block:knowledge_base-block_2'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: contentmain
+      weight: -1
+      uuid: 26f7c9ca-5c17-4655-bb12-068eb6a31eaf
+      context_mapping: {  }
+    2b058a8d-a32b-40e0-a8ce-c892f1d412de:
+      id: 'views_block:knowledge_base-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: contentmain
+      weight: 0
+      uuid: 2b058a8d-a32b-40e0-a8ce-c892f1d412de
       context_mapping: {  }
   id: panels_variant
   uuid: d4a0ac67-2a07-48a8-a2a5-8859447bd2d4
@@ -40,7 +53,7 @@ variant_settings:
   weight: 0
   layout: radix_boxton
   layout_settings: {  }
-  page_title: null
+  page_title: ''
   storage_type: page_manager
   storage_id: home-panels_variant-0
   builder: ipe

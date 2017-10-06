@@ -1,0 +1,11 @@
+uuid: 60a0edf8-6630-4ecb-8413-7465f4e4e3d8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xxSI3S2OZanip5c5RNas0vscN7c3a9UWI0C4eUWu0yQ
+name: Topics
+vid: topics
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,7 @@
+disaster_alerts.disaster_alert_form:
+  title: 'DisasterAlertForm'
+  route_name: disaster_alerts.disaster_alert_form
+  description: 'Disaster Configuration Form'
+  parent: system.admin_config_system
+  weight: 99
+
