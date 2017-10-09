@@ -1,0 +1,27 @@
+uuid: 14cadc92-a6db-46d3-a4d5-c61f3e81424b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_situation
+field_name: field_situation
+entity_type: node
+type: list_float
+settings:
+  allowed_values:
+    -
+      value: !!float 0
+      label: 'I Need'
+    -
+      value: !!float 1
+      label: 'I Want To Give'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,16 +1,16 @@
-uuid: f408e316-4198-407d-a9fc-265a6d82dcb1
+uuid: 91714f74-49a3-4696-8a73-e40b26939b58
 langcode: en
 status: true
 dependencies:
   module:
-    - geofield
+    - geolocation
     - node
-id: node.field_geofield
-field_name: field_geofield
+id: node.field_geolocation
+field_name: field_geolocation
 entity_type: node
-type: geofield
+type: geolocation
 settings: {  }
-module: geofield
+module: geolocation
 locked: false
 cardinality: 1
 translatable: true

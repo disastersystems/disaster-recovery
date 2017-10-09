@@ -5,16 +5,17 @@ dependencies:
   config:
     - field.field.node.recovery_organization.field_address
     - field.field.node.recovery_organization.field_description
-    - field.field.node.recovery_organization.field_geofield
-    - field.field.node.recovery_organization.field_needs
+    - field.field.node.recovery_organization.field_geolocation
+    - field.field.node.recovery_organization.field_looking_for
     - field.field.node.recovery_organization.field_phone
-    - field.field.node.recovery_organization.field_provides
+    - field.field.node.recovery_organization.field_situation
     - field.field.node.recovery_organization.field_website
     - field.field.node.recovery_organization.field_written_address
     - node.type.recovery_organization
   module:
     - address
-    - geofield
+    - geolocation
+    - options
     - telephone
     - text
     - user
@@ -37,21 +38,19 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_geofield:
-    weight: 103
+  field_geolocation:
+    weight: 109
     label: hidden
-    settings:
-      output_format: wkt
+    settings: {  }
     third_party_settings: {  }
-    type: geofield_default
+    type: geolocation_latlng
     region: content
-  field_needs:
-    weight: 104
+  field_looking_for:
+    weight: 111
     label: hidden
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_id
     region: content
   field_phone:
     weight: 106
@@ -61,13 +60,12 @@ content:
     third_party_settings: {  }
     type: telephone_link
     region: content
-  field_provides:
-    weight: 105
+  field_situation:
+    weight: 110
     label: hidden
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_label
+    type: list_default
     region: content
   field_website:
     weight: 107
