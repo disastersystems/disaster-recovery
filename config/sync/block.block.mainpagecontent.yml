@@ -9,7 +9,7 @@ dependencies:
 id: mainpagecontent
 theme: disaster_recovery_bootstrap
 region: content
-weight: -1
+weight: -2
 provider: null
 plugin: system_main_block
 settings:

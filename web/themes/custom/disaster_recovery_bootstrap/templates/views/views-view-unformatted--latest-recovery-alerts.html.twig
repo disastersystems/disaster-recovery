@@ -3,16 +3,16 @@
 set row_classes = [
 default_row_class ? 'views-row',
 'alert-info',
-'row'
+'col-md-12'
 ]
 %}
 <div{{ row.attributes.addClass(row_classes) }}>
 
-<div class="row">
+<div class="row padding-20px">
     <div class="col-md-1"><span class="label label-primary">ALERT</span></div>
     <div class="col-md-6">{{ row.content }} <a href="/recovery-alerts">See All Alerts</a>
     </div>
-    <div class="col-md-4">{{ drupal_block('alertblockheader', FALSE) }}</div>
+    <div class="col-md-5">{{ drupal_block('alertblockheader', FALSE) }}</div>
 </div>
 </div>
 {% endfor %}

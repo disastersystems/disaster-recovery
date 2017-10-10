@@ -12,7 +12,7 @@ dependencies:
 id: views_block__latest_recovery_alerts_latest_recovery_alert
 theme: disaster_recovery_bootstrap
 region: header
-weight: -1
+weight: -4
 provider: null
 plugin: 'views_block:latest_recovery_alerts-latest_recovery_alert'
 settings:

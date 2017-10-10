@@ -1,17 +1,16 @@
-uuid: 8297e942-c0ea-4fef-bcce-eb9c1e70770c
+uuid: 1cc11046-7fe9-4db7-bf70-40f85081d961
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.knowledge_base_help_center_page_
   module:
-    - system
     - views
   theme:
     - disaster_recovery_bootstrap
 id: exposedformknowledge_base_help_center_page_page_1
 theme: disaster_recovery_bootstrap
-region: content
+region: header
 weight: -3
 provider: null
 plugin: 'views_exposed_filter_block:knowledge_base_help_center_page_-page_1'
@@ -19,11 +18,6 @@ settings:
   id: 'views_exposed_filter_block:knowledge_base_help_center_page_-page_1'
   label: ''
   provider: views
-  label_display: visible
-  views_label: 'How can we help you?'
-visibility:
-  request_path:
-    id: request_path
-    pages: "/help-center\r\n<front>"
-    negate: false
-    context_mapping: {  }
+  label_display: '0'
+  views_label: ''
+visibility: {  }

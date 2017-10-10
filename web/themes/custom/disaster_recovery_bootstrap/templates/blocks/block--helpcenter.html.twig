@@ -1,0 +1,15 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'clearfix',
+    'container-fluid',
+    'background-height'
+  ]
+%}
+<section{{ attributes.addClass(classes) }} style="background-image:url({{ content.field_background.0}} ) ">
+  {% block content %}
+    {{ drupal_block('exposedformknowledge_base_help_center_page_page_1', FALSE) }}
+  {% endblock %}
+</section>
