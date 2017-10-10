@@ -1,0 +1,97 @@
+langcode: en
+status: true
+id: org
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: sample_content
+label: 'Import org'
+source:
+  plugin: url
+  urls: 'https://spreadsheets.google.com/feeds/list/1TXGQfZViLFAIldxOhgaix8hVBsxVOAdT_OGy_ZsisTU/1/public/values'
+  data_fetcher_plugin: http
+  data_parser_plugin: xml
+  item_selector: /feed/entry
+  fields:
+    -
+      name: title
+      selector: gsx:title
+    -
+      name: website
+      selector: gsx:website
+    -
+      name: situation
+      selector: gsx:situation
+    -
+      name: phone
+      selector: gsx:phone
+    -
+      name: writtenaddress
+      selector: gsx:writtenaddress
+    -
+      name: country
+      selector: gsx:country
+    -
+      name: streetaddress1
+      selector: gsx:streetaddress1
+    -
+      name: streetadress2
+      selector: gsx:streetadress2
+    -
+      name: city
+      selector: gsx:city
+    -
+      name: state
+      selector: gsx:state
+    -
+      name: zipcode
+      selector: gsx:zipcode
+    -
+      name: latitude
+      selector: gsx:latitude
+    -
+      name: longitude
+      selector: gsx:longitude
+    -
+      name: provides
+      selector: gsx:provides
+    -
+      name: description
+      selector: gsx:description
+  ids:
+    title:
+      type: string
+process:
+  type:
+    plugin: default_value
+    default_value: recovery_organization
+  title: title
+  field_description: description
+  field_looking_for: provides
+  field_looking_for:
+    -
+      plugin: migration_lookup
+      migration: resources
+      source: provides
+  field_phone: phone
+  field_situation: situation
+  field_website: website
+  field_written_address: writtenaddress
+  'field_geolocation/lat': latitude
+  'field_geolocation/lng': longitude
+  'field_address/country_code':
+    plugin: default_value
+    source: country
+  'field_address/administrative_area': state
+  'field_address/locality': city
+  'field_address/postal_code': zipcode
+  'field_address/address_line1': streetaddress1
+  'field_address/address_line2': streetadress2
+destination:
+  plugin: 'entity:node'
+dependencies:
+  enforced:
+    module:
+      - migrate_plus
+      - migrate_tools
