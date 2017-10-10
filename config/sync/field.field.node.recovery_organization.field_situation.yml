@@ -1,0 +1,21 @@
+uuid: 724a7188-ff49-46ec-b732-ef5f411f6eca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_situation
+    - node.type.recovery_organization
+  module:
+    - options
+id: node.recovery_organization.field_situation
+field_name: field_situation
+entity_type: node
+bundle: recovery_organization
+label: Situation
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

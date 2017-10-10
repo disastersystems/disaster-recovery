@@ -6,10 +6,10 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.recovery_organization.field_address
     - field.field.node.recovery_organization.field_description
-    - field.field.node.recovery_organization.field_geofield
-    - field.field.node.recovery_organization.field_needs
+    - field.field.node.recovery_organization.field_geolocation
+    - field.field.node.recovery_organization.field_looking_for
     - field.field.node.recovery_organization.field_phone
-    - field.field.node.recovery_organization.field_provides
+    - field.field.node.recovery_organization.field_situation
     - field.field.node.recovery_organization.field_website
     - field.field.node.recovery_organization.field_written_address
     - node.type.recovery_organization
@@ -21,14 +21,6 @@ targetEntityType: node
 bundle: recovery_organization
 mode: teaser
 content:
-  field_needs:
-    type: entity_reference_label
-    weight: 3
-    region: content
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
   field_phone:
     type: telephone_link
     weight: 1
@@ -36,14 +28,6 @@ content:
     label: hidden
     settings:
       title: ''
-    third_party_settings: {  }
-  field_provides:
-    type: entity_reference_label
-    weight: 4
-    region: content
-    label: hidden
-    settings:
-      link: false
     third_party_settings: {  }
   field_written_address:
     type: string
@@ -61,6 +45,8 @@ content:
 hidden:
   field_address: true
   field_description: true
-  field_geofield: true
+  field_geolocation: true
+  field_looking_for: true
+  field_situation: true
   field_website: true
   langcode: true

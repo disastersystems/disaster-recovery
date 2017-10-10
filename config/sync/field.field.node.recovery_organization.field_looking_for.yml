@@ -1,16 +1,16 @@
-uuid: a204834a-1a7b-4bbe-aca4-5acfc5af6455
+uuid: 87177d7b-abf4-44d3-994f-add4f0cd354b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_needs
+    - field.storage.node.field_looking_for
     - node.type.recovery_organization
     - taxonomy.vocabulary.resources
-id: node.recovery_organization.field_needs
-field_name: field_needs
+id: node.recovery_organization.field_looking_for
+field_name: field_looking_for
 entity_type: node
 bundle: recovery_organization
-label: Needs
+label: 'looking for/can provide'
 description: ''
 required: false
 translatable: false

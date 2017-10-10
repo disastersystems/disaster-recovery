@@ -1,21 +1,21 @@
-uuid: 335eb4d5-843f-4dc8-8d8c-1d15cb5d9a3f
+uuid: cc5cd04d-5876-4a13-ac2f-823474d8caeb
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_geofield
+    - field.storage.node.field_geolocation
     - node.type.recovery_organization
   module:
-    - geofield
-id: node.recovery_organization.field_geofield
-field_name: field_geofield
+    - geolocation
+id: node.recovery_organization.field_geolocation
+field_name: field_geolocation
 entity_type: node
 bundle: recovery_organization
-label: Geofield
+label: Geolocation
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: geofield
+field_type: geolocation
