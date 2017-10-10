@@ -1,0 +1,22 @@
+uuid: 56771d30-3010-4216-96e6-37b4a1a7feab
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.background_img
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.background_img.body
+field_name: body
+entity_type: block_content
+bundle: background_img
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

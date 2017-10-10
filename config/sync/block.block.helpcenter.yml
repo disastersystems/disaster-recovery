@@ -1,0 +1,31 @@
+uuid: ef82b08c-02fb-4865-a08b-348622de9dec
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:background_img:808763a8-5314-4b56-8ce4-2fef9b6f4a5f'
+  module:
+    - block_content
+    - system
+  theme:
+    - disaster_recovery_bootstrap
+id: helpcenter
+theme: disaster_recovery_bootstrap
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:808763a8-5314-4b56-8ce4-2fef9b6f4a5f'
+settings:
+  id: 'block_content:808763a8-5314-4b56-8ce4-2fef9b6f4a5f'
+  label: 'help center'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/help-center\r\n<front>"
+    negate: false
+    context_mapping: {  }

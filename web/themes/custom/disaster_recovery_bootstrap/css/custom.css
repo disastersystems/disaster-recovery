@@ -1,9 +1,15 @@
 .panel:last-child{
   margin-bottom: 20px;
 }
+.footer {
+  border-top: none !important;
+}
 
 .padding-20px{
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
+.background-height{
+  height: 339px;
+}

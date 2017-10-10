@@ -1,0 +1,23 @@
+uuid: d9d7f2da-2908-4328-97bc-8f29cf659bd4
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.situation_map
+  module:
+    - views
+  theme:
+    - disaster_recovery_bootstrap
+id: exposedformsituation_mappage_1
+theme: disaster_recovery_bootstrap
+region: header
+weight: -2
+provider: null
+plugin: 'views_exposed_filter_block:situation_map-page_1'
+settings:
+  id: 'views_exposed_filter_block:situation_map-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

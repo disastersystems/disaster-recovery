@@ -50,10 +50,11 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
-    'alerts-block',
     'clearfix',
     'container-fluid',
-    'text-center'
+    'text-center',
+    'navbar-inverse',
+    'padding-20px'
   ]
 %}
 <section{{ attributes.addClass(classes) }}>
@@ -64,12 +65,13 @@
   {{ title_suffix }}
 
   {% block content %}
-  <div class"col-lg-4">
+  <div class="col-lg-4">
     <p class="lead">Sign Up For Alerts</p>
   </div>
   <div class="form--inline form-inline clearfix col-lg-4 footer-alert">
     {{ drupal_form('Drupal\\disaster_alerts\\Form\\AddPhoneNumber') }}
     <span class="the-return-footer"></span>
   </div>
+
   {% endblock %}
 </section>

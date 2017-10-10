@@ -11,7 +11,7 @@ dependencies:
 id: alertblockheader
 theme: disaster_recovery_bootstrap
 region: content
-weight: 0
+weight: -1
 provider: null
 plugin: 'block_content:d997f041-e21e-4020-97c5-2bc494a87bbb'
 settings:

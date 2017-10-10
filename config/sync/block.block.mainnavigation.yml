@@ -11,7 +11,7 @@ dependencies:
 id: mainnavigation
 theme: disaster_recovery_bootstrap
 region: header
-weight: -2
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:
