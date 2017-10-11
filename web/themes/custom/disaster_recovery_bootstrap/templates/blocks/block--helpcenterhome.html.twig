@@ -1,0 +1,16 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'clearfix',
+    'row',
+    'padding-20px'
+  ]
+%}
+<section{{ attributes.addClass(classes) }}>
+  {% block content %}
+      <h3{{ title_attributes.addClass(['text-center']) }}>How can we help you?</h3>
+      {{ drupal_block('exposedformknowledge_base_help_center_page_page_1', FALSE) }}
+  {% endblock %}
+</section>

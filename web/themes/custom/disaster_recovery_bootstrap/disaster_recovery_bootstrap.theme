@@ -5,3 +5,18 @@
  *
  * Place your custom PHP code in this file.
  */
+/**
+ * Implements hook_preprocess_HOOK() for block document templates.
+ */
+
+function disaster_recovery_bootstrap_preprocess_block(array &$variables) {
+  if(!empty($variables['content']['#block_content'])) {
+    $variables['mainMenu'] = disaster_recovery_bootstrap_get_menu('main');
+  }
+}
+function disaster_recovery_bootstrap_get_menu($menu_name) {
+  $block_manager = \Drupal::service('plugin.manager.block');
+  $plugin_block = $block_manager->createInstance("system_menu_block:$menu_name");
+  $render = $plugin_block->build();
+  return $render;
+}

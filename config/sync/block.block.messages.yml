@@ -1,4 +1,4 @@
-uuid: 6b95acbe-e5a4-40c7-bec1-e52117c3c96a
+uuid: 2607e7bc-3354-422f-be0d-bf781c3a529b
 langcode: en
 status: true
 dependencies:
@@ -6,15 +6,15 @@ dependencies:
     - system
   theme:
     - disaster_recovery_bootstrap
-id: mainpagecontent
+id: messages
 theme: disaster_recovery_bootstrap
-region: content
-weight: -1
+region: header
+weight: -4
 provider: null
-plugin: system_main_block
+plugin: system_messages_block
 settings:
-  id: system_main_block
-  label: 'Main page content'
+  id: system_messages_block
+  label: Messages
   provider: system
   label_display: '0'
 visibility: {  }

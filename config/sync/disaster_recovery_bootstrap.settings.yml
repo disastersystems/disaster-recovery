@@ -1,17 +1,21 @@
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: 'http://recovery.docker.localhost/themes/contrib/bootstrap/favicon.ico'
-  use_default: true
+  url: 'http://drupal.docker.localhost:8000/themes/custom/disaster_recovery_bootstrap/favicon.ico'
+  use_default: 1
+schemas:
+  bootstrap: 8000
+  disaster_recovery_bootstrap: 8000
 features:
   comment_user_picture: true
   comment_user_verification: true
-  favicon: true
+  favicon: 1
   node_user_picture: true
 logo:
   path: ''
   url: ''
-  use_default: true
-schemas:
-  bootstrap: 8000
-  disaster_recovery_bootstrap: 8000
+  use_default: 1
+table_responsive: '-1'
+table: ''
+button_iconize: 0
+fluid_container: 1

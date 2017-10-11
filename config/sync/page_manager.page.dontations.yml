@@ -6,7 +6,7 @@ id: dontations
 label: Dontations
 description: ''
 use_admin_theme: false
-path: /dontations
+path: /donate
 access_logic: and
 access_conditions: {  }
 parameters: {  }

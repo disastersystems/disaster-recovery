@@ -4,13 +4,28 @@ status: true
 dependencies:
   config:
     - page_manager.page.dontations
+  content:
+    - 'block_content:everything_block:2f0e7e61-e5d2-477b-be68-12059b384f6d'
   module:
+    - block_content
     - panels
 id: dontations-panels_variant-0
 label: Panels
 variant: panels_variant
 variant_settings:
-  blocks: {  }
+  blocks:
+    d181313e-e53c-447d-becd-fb6fd4467497:
+      id: 'block_content:2f0e7e61-e5d2-477b-be68-12059b384f6d'
+      label: 'Donate Now'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: contentmain
+      weight: 0
+      uuid: d181313e-e53c-447d-becd-fb6fd4467497
+      context_mapping: {  }
   id: panels_variant
   uuid: 514feab4-8325-4738-8915-56d8a474ca24
   label: null

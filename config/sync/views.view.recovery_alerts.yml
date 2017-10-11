@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.list
     - node.type.recovery_alert
-    - views.view.recovery_alerts_today
   module:
     - node
     - user
@@ -52,7 +51,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 10
+          items_per_page: 20
           offset: 0
           id: 0
           total_pages: null
@@ -277,30 +276,6 @@ display:
           granularity: second
       title: Alerts
       header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: false
-          content:
-            value: '<p class="padding-20px"><strong>Today</strong></p>'
-            format: full_html
-          plugin_id: text
-        view:
-          id: view
-          table: views
-          field: view
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          view_to_insert: 'recovery_alerts_today:block_1'
-          inherit_arguments: false
-          plugin_id: view
         area_1:
           id: area_1
           table: views
@@ -311,8 +286,8 @@ display:
           empty: false
           tokenize: false
           content:
-            value: '<p class="padding-20px"><strong>Past</strong></p>'
-            format: basic_html
+            value: '<h1 class="padding-20px lead font-40 text-center">Alerts</h1>'
+            format: full_html
           plugin_id: text
       footer: {  }
       empty: {  }
