@@ -1,13 +1,15 @@
-<ul class="list-group">
-{% for row in rows %}
-{%
-set row_classes = [
-default_row_class ? 'views-row',
-'list-group-item'
-]
-%}
-<li{{ row.attributes.addClass(row_classes) }}>
-  {{ row.content }}
-</li>
-{% endfor %}
-</ul>
+<div class="container">
+  <ul class="list-group">
+  {% for row in rows %}
+  {%
+  set row_classes = [
+  default_row_class ? 'views-row',
+  'list-group-item'
+  ]
+  %}
+  <li{{ row.attributes.addClass(row_classes) }}>
+    {{ row.content }}
+  </li>
+  {% endfor %}
+  </ul>
+</div>

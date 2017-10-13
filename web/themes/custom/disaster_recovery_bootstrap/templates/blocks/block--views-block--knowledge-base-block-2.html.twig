@@ -4,17 +4,21 @@
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
     'clearfix',
-    'container-fluid'
+    'row',
+    'breadcrumb',
+    'margin-bottom-0'
   ]
 %}
 <section{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
+  <div class="container">
   {% if label %}
-     <h2{{ title_attributes.addClass(['container-fluid', 'text-center']) }}>{{ label }}</h2>
+     <h2{{ title_attributes.addClass(['container-fluid', 'text-center', 'font-20']) }}>{{ label }}</h2>
   {% endif %}
   {{ title_suffix }}
 
   {% block content %}
     {{ content }}
   {% endblock %}
+  </div>
 </section>

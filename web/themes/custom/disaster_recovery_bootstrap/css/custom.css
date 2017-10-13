@@ -3,6 +3,8 @@
 }
 .footer {
   border-top: none !important;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .padding-20px{
@@ -12,4 +14,46 @@
 
 .background-height{
   height: 339px;
+}
+
+.margin-top-80{
+  margin-top: 80px;
+}
+
+.margin-top-19{
+  margin-top: 19px;
+}
+
+.padding-bottom-20px{
+  padding-bottom: 20px;
+}
+
+.font-40{
+  font-size: 40px;
+}
+
+.font-20{
+  font-size: 20px;
+}
+
+.contextual-region {
+  position: unset;
+}
+
+.margin-bottom-0{
+  margin-bottom: 0;
+}
+
+hr{
+  margin-top: 0px;
+}
+.font-weight-300{
+  font-weight: 300;
+}
+.white{
+  color: white;
+}
+.see-alerts{
+  font-weight: bold;
+  text-decoration: underline;
 }

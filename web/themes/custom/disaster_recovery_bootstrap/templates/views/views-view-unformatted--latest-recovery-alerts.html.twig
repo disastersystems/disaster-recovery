@@ -8,9 +8,9 @@ default_row_class ? 'views-row',
 %}
 <div{{ row.attributes.addClass(row_classes) }}>
 
-<div class="row padding-20px">
+<div class="container padding-20px">
     <div class="col-md-1"><span class="label label-primary">ALERT</span></div>
-    <div class="col-md-6">{{ row.content }} <a href="/recovery-alerts">See All Alerts</a>
+    <div class="col-md-6">{{ row.content }} <a href="/recovery-alerts" class="see-alerts">See All Alerts</a>
     </div>
     <div class="col-md-5">{{ drupal_block('alertblockheader', FALSE) }}</div>
 </div>

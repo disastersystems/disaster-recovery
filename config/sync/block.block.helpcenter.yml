@@ -12,7 +12,7 @@ dependencies:
 id: helpcenter
 theme: disaster_recovery_bootstrap
 region: content
-weight: -5
+weight: -3
 provider: null
 plugin: 'block_content:808763a8-5314-4b56-8ce4-2fef9b6f4a5f'
 settings:
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/help-center\r\n<front>"
+    pages: /help-center
     negate: false
     context_mapping: {  }

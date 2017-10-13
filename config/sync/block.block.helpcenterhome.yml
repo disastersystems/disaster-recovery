@@ -1,23 +1,23 @@
-uuid: 4a58685d-3f74-43b8-9747-92750067a738
+uuid: 0c7226cb-f0a2-4b91-b923-3c38b96ab3b9
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:background_img:04b505be-9e9f-46f7-a952-be23558c9ca1'
+    - 'block_content:everything_block:2ccd5c2c-6682-4a33-aa19-866ec9308174'
   module:
     - block_content
     - system
   theme:
     - disaster_recovery_bootstrap
-id: map
+id: helpcenterhome
 theme: disaster_recovery_bootstrap
 region: content
-weight: -5
+weight: -4
 provider: null
-plugin: 'block_content:04b505be-9e9f-46f7-a952-be23558c9ca1'
+plugin: 'block_content:2ccd5c2c-6682-4a33-aa19-866ec9308174'
 settings:
-  id: 'block_content:04b505be-9e9f-46f7-a952-be23558c9ca1'
-  label: map
+  id: 'block_content:2ccd5c2c-6682-4a33-aa19-866ec9308174'
+  label: 'help center home'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "<front>\r\n/map"
+    pages: '<front>'
     negate: false
     context_mapping: {  }
