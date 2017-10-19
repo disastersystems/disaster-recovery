@@ -1,3 +1,6 @@
+.margin-b-0{
+  margin-bottom: 0px;
+}
 .panel:last-child{
   margin-bottom: 20px;
 }
@@ -5,6 +8,7 @@
   border-top: none !important;
   padding-top: 0px;
   padding-bottom: 0px;
+  margin-top: 0px;
 }
 
 .padding-20px{
@@ -13,15 +17,12 @@
 }
 
 .background-height{
-  height: 339px;
+  height: auto;
 }
 
-.margin-top-80{
-  margin-top: 80px;
-}
-
-.margin-top-19{
-  margin-top: 19px;
+.margin-6{
+  margin-top: 6%;
+  margin-bottom: 6% !important;
 }
 
 .padding-bottom-20px{
@@ -43,6 +44,10 @@
 .margin-bottom-0{
   margin-bottom: 0;
 }
+body{
+  margin-top: 0px;
+}
+
 
 hr{
   margin-top: 0px;
@@ -56,4 +61,98 @@ hr{
 .see-alerts{
   font-weight: bold;
   text-decoration: underline;
+}
+.navbar{
+  margin-bottom:  0px;
+}
+
+.feed-icons{
+  display: none;
+}
+
+
+.form-item-field-situation-value {
+  /* display: block; */
+  width: 20%;
+}
+
+.form-item-field-looking-for-target-id {
+  /* display: block; */
+  width: 35%;
+}
+
+.form-item-field-geolocation-boundary-geolocation-geocoder-google-geocoding-api {
+  /* display: block !important; */
+  width: 40%;
+}
+
+#views-exposed-form-situation-map-page-1 > div > div.form-actions {
+  display: block;
+  padding-top: 10px;
+}
+input#edit-field-geolocation-boundary-geolocation-geocoder-google-geocoding-api {
+  width: 100%;
+}
+
+button#edit-submit-situation-map {
+  width: 200px;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+  h1.font-weight-300 {
+    font-size: 29px;
+  }
+
+  .form-item-field-situation-value {
+    /* display: block; */
+    width: 100%;
+  }
+
+  .form-item-field-looking-for-target-id {
+    /* display: block; */
+    width: 100%;
+  }
+
+  .form-item-field-geolocation-boundary-geolocation-geocoder-google-geocoding-api {
+    /* display: block !important; */
+    width: 100%;
+  }
+
+  #views-exposed-form-situation-map-page-1 > div > div.form-actions {
+    display: block;
+    padding-top: 10px;
+  }
+  input#edit-field-geolocation-boundary-geolocation-geocoder-google-geocoding-api {
+    width: 100%;
+  }
+
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1200px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+  .form-item-field-situation-value {
+    /* display: block; */
+    width: 100%;
+  }
+
+  .form-item-field-looking-for-target-id {
+    /* display: block; */
+    width: 100%;
+  }
+
+  .form-item-field-geolocation-boundary-geolocation-geocoder-google-geocoding-api {
+    /* display: block !important; */
+    width: 100%;
+  }
+
+  #views-exposed-form-situation-map-page-1 > div > div.form-actions {
+    display: block;
+    padding-top: 10px;
+  }
+  input#edit-field-geolocation-boundary-geolocation-geocoder-google-geocoding-api {
+    width: 100%;
+  }
 }
