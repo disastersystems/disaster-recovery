@@ -1,0 +1,22 @@
+uuid: 2f5372b2-c8a4-404e-a898-e07781850192
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: organization
+label: Organization
+type: 'canonical_entities:node'
+pattern: 'organization/[node:title]'
+selection_criteria:
+  12cb87de-1535-4879-816c-f36e9f9032ac:
+    id: node_type
+    bundles:
+      recovery_organization: recovery_organization
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 12cb87de-1535-4879-816c-f36e9f9032ac
+selection_logic: and
+weight: -5
+relationships: {  }

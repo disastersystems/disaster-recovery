@@ -12,6 +12,8 @@
 function disaster_recovery_bootstrap_preprocess_block(array &$variables) {
   if(!empty($variables['content']['#block_content'])) {
     $variables['mainMenu'] = disaster_recovery_bootstrap_get_menu('main');
+    $site_config = \Drupal::config('system.site');
+    $variables['site_name'] = $site_config->get('name');
   }
 }
 function disaster_recovery_bootstrap_get_menu($menu_name) {

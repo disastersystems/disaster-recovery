@@ -8,10 +8,10 @@
     'background-height'
   ]
 %}
-<section{{ attributes.addClass(classes) }} style="background-image:url({{ content.field_background.0}} ) ">
+<section{{ attributes.addClass(classes) }} style="background-image:url({{ content.field_background.0}} );background-repeat: no-repeat;background-size: cover; ">
   {% block content %}
   <div class="container">
-    <div class="panel panel-default col-md-6 col-md-offset-3 margin-top-19">
+    <div class="panel panel-default col-md-8 col-md-offset-2 margin-6">
       <div class="panel-body text-center view-row-padding padding-bottom-20px">
         <h1{{ title_attributes.addClass(['font-weight-300']) }}>Locations to Get or Give</h1>
         {{ drupal_block('exposedformsituation_mappage_1', FALSE) }}
