@@ -1,0 +1,22 @@
+uuid: 49c0b034-847e-4b8b-aad5-923e638b3093
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: update
+label: update
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  225b3b97-4ad4-44b0-b916-d0927d852334:
+    id: node_type
+    bundles:
+      recovery_update: recovery_update
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 225b3b97-4ad4-44b0-b916-d0927d852334
+selection_logic: and
+weight: -5
+relationships: {  }

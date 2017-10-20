@@ -1,0 +1,25 @@
+uuid: 56f82f87-d94c-4e3e-b59b-1f4f4b205343
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:everything_block:193fdc96-edef-48e6-84f9-3c34de70eedd'
+  module:
+    - block_content
+  theme:
+    - disaster_recovery_bootstrap
+id: navegation
+theme: disaster_recovery_bootstrap
+region: header
+weight: -6
+provider: null
+plugin: 'block_content:193fdc96-edef-48e6-84f9-3c34de70eedd'
+settings:
+  id: 'block_content:193fdc96-edef-48e6-84f9-3c34de70eedd'
+  label: navegation
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

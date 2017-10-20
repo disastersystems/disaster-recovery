@@ -99,8 +99,7 @@ button#edit-submit-situation-map {
 }
 
 
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
 
   h1.font-weight-300 {
     font-size: 29px;
@@ -130,26 +129,24 @@ button#edit-submit-situation-map {
   }
 
 }
-
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1200px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+@media (min-width: 401px) and (max-width: 800px) {
   .form-item-field-situation-value {
-    /* display: block; */
+    display: block !important;
     width: 100%;
   }
 
   .form-item-field-looking-for-target-id {
-    /* display: block; */
+    display: block !important;
     width: 100%;
   }
 
   .form-item-field-geolocation-boundary-geolocation-geocoder-google-geocoding-api {
-    /* display: block !important; */
+    display: block !important;
     width: 100%;
   }
 
   #views-exposed-form-situation-map-page-1 > div > div.form-actions {
-    display: block;
+    display: block !important;
     padding-top: 10px;
   }
   input#edit-field-geolocation-boundary-geolocation-geocoder-google-geocoding-api {
